@@ -3,7 +3,7 @@
 #include <ctype.h>
 
 
-int isalpha_checker(int input){
+int ft_isalpha(int input){
     if ((input > 64 && input < 91) || (input > 96 && input < 123))
     {
         return(0);
@@ -23,7 +23,7 @@ int main(int argc, char* argv[]) {
     {
         while (argIndex >= argc)
     {
-        isalpha_checker(*argv[argIndex]);
+        ft_isalpha(*argv[argIndex]);
         argIndex++;
     }
     }
@@ -41,11 +41,11 @@ int main(int argc, char* argv[]) {
     int var5 = 'D';
     char str[] = "tests";
 
-    printf("the result is %d\n", isalpha_checker(var1));
-    printf("the result is %d\n", isalpha_checker(var2));
-    printf("the result is %d\n", isalpha_checker(var3));
-    printf("the result is %d\n", isalpha_checker(var4));
-    printf("the result is %d\n", isalpha_checker(var5));
+    printf("the result is %d\n", ft_isalpha(var1));
+    printf("the result is %d\n", ft_isalpha(var2));
+    printf("the result is %d\n", ft_isalpha(var3));
+    printf("the result is %d\n", ft_isalpha(var4));
+    printf("the result is %d\n", ft_isalpha(var5));
     printf("test = %s\n", str);
     
 
