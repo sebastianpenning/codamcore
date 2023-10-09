@@ -6,7 +6,7 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/08 16:15:25 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/08 16:59:39 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/09 19:52:52 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 #include <ctype.h>
 #include <string.h>
 #include <stdlib.h>
-#include <bsd/string.h>
-#include "ft_strlen.c"
+// #include <bsd/string.h>
+// #include "ft_strlen.c"
 
 int ft_strncmp(const char *s1, const char *s2, size_t n)
 {
@@ -36,32 +36,32 @@ int ft_strncmp(const char *s1, const char *s2, size_t n)
 	return(returnval);
 }
 
-int main ()
-{
-	const char firstTest1[10] = "B";
-	const char firstTest2[10] = "";
-	const char firstTest3[10] = "ABA ABA";
-	const char firstTest4[10] = "ABA ABA";
-	const char firstTest5[10] = "ABA ABA";
+// int main ()
+// {
+// 	const char firstTest1[10] = "B";
+// 	const char firstTest2[10] = "";
+// 	const char firstTest3[10] = "ABA ABA";
+// 	const char firstTest4[10] = "ABA ABA";
+// 	const char firstTest5[10] = "ABA ABA";
 
 
-	const char secondTest1[10] = "A";
-	const char secondTest2[10] = "ABA ABA";
-	const char secondTest3[10] = "ABAZABA";
-	const char secondTest4[10] = "ABA ABAA";
-	const char secondTest5[9] = "ABA ABAA";
+// 	const char secondTest1[10] = "A";
+// 	const char secondTest2[10] = "ABA ABA";
+// 	const char secondTest3[10] = "ABAZABA";
+// 	const char secondTest4[10] = "ABA ABAA";
+// 	const char secondTest5[9] = "ABA ABAA";
 
-	printf("%d\n", strncmp(firstTest1, secondTest1, 10));
-	printf("%d\n", ft_strncmp(firstTest1, secondTest1, 10));
-	printf("%d\n", strncmp(firstTest2, secondTest2, 10));
-	printf("%d\n", ft_strncmp(firstTest2, secondTest2, 10));
-	printf("%d\n", strncmp(firstTest3, secondTest3, 10));
-	printf("%d\n", ft_strncmp(firstTest3, secondTest3, 10));
-	printf("%d\n", strncmp(firstTest4, secondTest4, 10));
-	printf("%d\n", ft_strncmp(firstTest4, secondTest4, 10));
-	printf("%d\n", strncmp(firstTest5, secondTest5, 10));
-	printf("%d\n", ft_strncmp(firstTest5, secondTest5, 10));
+// 	printf("%d\n", strncmp(firstTest1, secondTest1, 10));
+// 	printf("%d\n", ft_strncmp(firstTest1, secondTest1, 10));
+// 	printf("%d\n", strncmp(firstTest2, secondTest2, 10));
+// 	printf("%d\n", ft_strncmp(firstTest2, secondTest2, 10));
+// 	printf("%d\n", strncmp(firstTest3, secondTest3, 10));
+// 	printf("%d\n", ft_strncmp(firstTest3, secondTest3, 10));
+// 	printf("%d\n", strncmp(firstTest4, secondTest4, 10));
+// 	printf("%d\n", ft_strncmp(firstTest4, secondTest4, 10));
+// 	printf("%d\n", strncmp(firstTest5, secondTest5, 10));
+// 	printf("%d\n", ft_strncmp(firstTest5, secondTest5, 10));
 
 
-	return(0);
-}
+// 	return(0);
+// }
