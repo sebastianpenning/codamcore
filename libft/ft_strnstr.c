@@ -6,10 +6,9 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/09 18:54:25 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/10 19:05:14 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/10 19:06:58 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include <ctype.h>
 #include <string.h>
