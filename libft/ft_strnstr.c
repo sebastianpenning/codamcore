@@ -6,7 +6,7 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/09 18:54:25 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/09 19:54:21 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/10 19:05:14 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,12 @@ char * ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	while (b_cptr[index] != '\0' && index < len)
 	{
-		if (ft_strncmp(l_cptr, b_cptr+ index, little_len) == 0)
+		// printf("%d\n", ft_strncmp(l_cptr, b_cptr+ index, little_len -1));
+		// printf("%s\n", l_cptr);
+		// printf("%s\n", b_cptr+ index);
+		// printf("%d\n", little_len);
+		// printf("%s\n", "---------");
+		if (ft_strncmp(l_cptr, b_cptr+ index, little_len -1) == 0)
 		{
 			return(b_cptr+index);
 		}
@@ -49,11 +54,20 @@ char * ft_strnstr(const char *big, const char *little, size_t len)
 int main ()
 {	
 	const char littletest1[20] = "    ";
+	const char littletest2[20] = "";
+	const char littletest3[20] = "bobo";
 
+
+	const char bigtest1[20] = "dsjc    dsjalka";
 	const char bigtest2[20] = "dsjc    dsjalka";
+	const char bigtest3[10] = "dsjc    ";
 
-	printf("%s\n", strnstr(bigtest2, littletest1, 20));
+	printf("%s\n", strnstr(bigtest1, littletest1, 20));
 	printf("%s\n", ft_strnstr(bigtest2, littletest1, 20));
+	printf("%s\n", strnstr(bigtest2, littletest2, 20));
+	printf("%s\n", ft_strnstr(bigtest2, littletest2, 20));
+	printf("%s\n", strnstr(bigtest3, littletest3, 20));
+	printf("%s\n", ft_strnstr(bigtest3, littletest3, 20));
 
 	return (0);
 }
