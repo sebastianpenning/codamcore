@@ -6,7 +6,7 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/10 20:35:22 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/10 20:49:07 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/11 19:26:14 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char *ft_strdup(const char *s)
 	s_cptr = (char *)s;
 	s_len = ft_strlen(s_cptr);
 
-	ns_vptr = malloc(s_len);
+	ns_vptr = malloc(s_len + 1);
 	ns_cptr = (char *)ns_vptr;
 	index = 0;
 
@@ -38,6 +38,7 @@ char *ft_strdup(const char *s)
 		ns_cptr[index] = s_cptr[index];
 		index++; 
 	}
+	ns_cptr[index] = '\0';
 	return(ns_cptr);
 }
 
