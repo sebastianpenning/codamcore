@@ -6,7 +6,7 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/06 22:35:47 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/11 20:27:57 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/14 21:01:13 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@
 
 size_t ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	printf("%s", dst);
 	size_t srclen;
 	size_t index;
 	const char *src_cptr;
@@ -38,7 +37,7 @@ size_t ft_strlcpy(char *dst, const char *src, size_t size)
 		dst[index] = src[index];
 		index ++; 	
 	}
-	dst[index] = '\0';
+	dst[index++] = '\0';
 
 	return(srclen);
 }
