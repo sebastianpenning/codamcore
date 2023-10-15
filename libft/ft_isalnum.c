@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: spenning <spenning@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/04 14:00:52 by spenning          #+#    #+#             */
-/*   Updated: 2023/10/04 14:19:47 by spenning         ###   ########.fr       */
+/*                                                        ::::::::            */
+/*   ft_isalnum.c                                       :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: spenning <spenning@student.42.fr>            +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2023/10/04 14:00:52 by spenning      #+#    #+#                 */
+/*   Updated: 2023/10/15 22:19:32 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <ctype.h>
 
-int	ft_isalnum(int input)
+int	ft_isalnum(int c)
 {
-	if ((input > 47 && input < 58) || (input > 64 && input < 91)
-		|| (input > 96 && input < 123))
+	if ((c > 47 && c < 58) || (c > 64 && c < 91)
+		|| (c > 96 && c < 123))
 	{
 		return (1);
 	}

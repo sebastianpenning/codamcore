@@ -3,8 +3,8 @@
 #include <ctype.h>
 
 
-int ft_isalpha(int input){
-    if ((input > 64 && input < 91) || (input > 96 && input < 123))
+int ft_isalpha(int c){
+    if ((c > 64 && c < 91) || (c > 96 && c < 123))
     {
         return(0);
     }

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: spenning <spenning@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/04 14:52:21 by spenning          #+#    #+#             */
-/*   Updated: 2023/10/04 14:58:29 by spenning         ###   ########.fr       */
+/*                                                        ::::::::            */
+/*   ft_tolower.c                                       :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: spenning <spenning@student.42.fr>            +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2023/10/04 14:52:21 by spenning      #+#    #+#                 */
+/*   Updated: 2023/10/15 22:23:50 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 #include <unistd.h>
 #include <ctype.h>
 
-int ft_tolower(int input)
+int ft_tolower(int c)
 {
-	if (input > 64 && input < 91)
+	if (c > 64 && c < 91)
 	{
-		input = input + 32;
-		return(input);
+		c = c + 32;
+		return(c);
 	}
 	else
 	{
-		return(input);
+		return(c);
 	}
 }
 

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: spenning <spenning@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/04 14:34:13 by spenning          #+#    #+#             */
-/*   Updated: 2023/10/04 14:50:22 by spenning         ###   ########.fr       */
+/*                                                        ::::::::            */
+/*   ft_toupper.c                                       :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: spenning <spenning@student.42.fr>            +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2023/10/04 14:34:13 by spenning      #+#    #+#                 */
+/*   Updated: 2023/10/15 22:23:28 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 #include <unistd.h>
 #include <ctype.h>
 
-char ft_toupper(int input)
+char ft_toupper(int c)
 {
-	if (input > 96 && input <123)
+	if (c > 96 && c <123)
 	{
-		input = input - 32;
-		return(input);
+		c = c - 32;
+		return(c);
 	}
 	else
 	{
-		return(input);
+		return(c);
 	}
 }
 

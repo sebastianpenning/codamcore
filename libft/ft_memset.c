@@ -6,7 +6,7 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/04 14:32:28 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/06 19:58:00 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/15 22:21:27 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,15 @@
 //Check waarom er bij de documentatie van memset een size_t als datatype wordt gebruikt
 //https://www.tutorialspoint.com/c_standard_library/c_function_memset.htm
 
-void *ft_memset(void *str, int charachter, size_t size)
+void *ft_memset(void *s, int c, size_t n)
 {
 	char *cptr;
-	cptr = (char*)str;
+	cptr = (char*)s;
 	long unsigned int index;
 	index = 0;
-	while (index <= size)
+	while (index <= n)
 	{
-		cptr[index] = charachter;
+		cptr[index] = c;
 		index++;
 	}
 	return(cptr);
