@@ -6,7 +6,7 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/15 20:21:09 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/15 21:52:50 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/15 21:56:28 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@
 #include <stdio.h>
 #include "ft_strlen.c"
 
-char pluschar(unsigned int ui, char c)
-{
-	c = c + 1;
-	return (c);
-}
+// char pluschar(unsigned int ui, char c)
+// {
+// 	c = c + 1;
+// 	return (c);
+// }
 
 char * ft_strmapi(char const *s, char (*f) (unsigned int, char))
 {
@@ -46,10 +46,10 @@ char * ft_strmapi(char const *s, char (*f) (unsigned int, char))
 }
 
 
-int main ()
-{
-	char const * test = "ABCDEFGH";
+// int main ()
+// {
+// 	char const * test = "ABCDEFGH";
 
-	printf("%s", ft_strmapi(test, pluschar));
-	return(0);
-}
+// 	printf("%s", ft_strmapi(test, pluschar));
+// 	return(0);
+// }
