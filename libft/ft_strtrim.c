@@ -6,7 +6,7 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/11 19:38:41 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/16 20:05:49 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/16 20:16:53 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,24 +16,6 @@
 #include <bsd/string.h>
 #include "ft_strncmp.c"
 #include "ft_strlcpy.c"
-
-size_t ft_strlen2(const char *s){
-    if (s[0] == '\0')
-    {
-        return(0);
-    }
-    else
-    {
-        size_t index;
-        index = 0;
-
-        while (s[index] != '\0')
-        {
-            index++;   
-        }
-        return index;
-    }
-}
 
 
 static int istrimmable(char const *s1 ,char const *set)
@@ -64,7 +46,7 @@ char * ft_strtrim(char const *s1, char const *set)
 	{
 		s1_cptr++;
 	}
-	remainder = ft_strlen2(s1_cptr);
+	remainder = ft_strlen(s1_cptr);
 	while(istrimmable((s1_cptr + remainder) - 1, set) && remainder > 0)
 	{
 		remainder--;
