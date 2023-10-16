@@ -6,16 +6,11 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/11 19:03:23 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/16 20:05:20 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/16 20:25:06 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <string.h>
-#include <stdlib.h>
-#include <bsd/string.h>
-#include "ft_strlen.c"
-#include "ft_strncmp.c"
+#include "libft.h"
 
 char *ft_strjoin(char const *s1, char const *s2)
 {

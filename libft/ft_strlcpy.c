@@ -6,18 +6,11 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/06 22:35:47 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/16 20:06:27 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/16 20:25:18 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h> 
-#include <unistd.h>
-#include <ctype.h>
-#include <string.h>
-#include <stdlib.h>
-#include <bsd/string.h>
-#include "ft_strlen.c"
-
+#include "libft.h"
 
 size_t ft_strlcpy(char *dst, const char *src, size_t size)
 {

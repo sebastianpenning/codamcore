@@ -6,15 +6,11 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/06 22:35:47 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/16 20:04:06 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/16 20:23:26 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h> 
-#include <unistd.h>
-#include <ctype.h>
-#include <string.h>
-#include <stdlib.h>
+#include "libft.h"
 
 void *ft_memmove(void *dest, const void *src, size_t n)
 {

@@ -6,15 +6,11 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/15 20:21:09 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/16 20:06:16 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/16 20:25:32 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <string.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include "ft_strlen.c"
+#include "libft.h"
 
 char * ft_strmapi(char const *s, char (*f) (unsigned int, char))
 {

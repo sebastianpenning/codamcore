@@ -6,16 +6,11 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/06 21:30:56 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/16 20:03:54 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/16 20:23:19 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h> 
-#include <unistd.h>
-#include <ctype.h>
-#include <string.h>
-#include <stdlib.h>
-
+#include "libft.h"
 
 void *ft_memcpy(void *dest, const void *src, size_t n)
 {

@@ -6,16 +6,11 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/10 21:36:05 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/16 20:05:44 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/16 20:27:58 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <string.h>
-#include <stdlib.h>
-#include <bsd/string.h>
-#include "ft_strlen.c"
-#include "ft_strncmp.c"
+#include "libft.h"
 
 char *ft_substr(char const *s, unsigned int start, size_t len)
 {

@@ -6,17 +6,11 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/11 19:38:41 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/16 20:16:53 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/16 20:26:22 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <string.h>
-#include <stdlib.h>
-#include <bsd/string.h>
-#include "ft_strncmp.c"
-#include "ft_strlcpy.c"
-
+#include "libft.h"
 
 static int istrimmable(char const *s1 ,char const *set)
 {

@@ -6,14 +6,11 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/06 20:08:25 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/16 20:02:59 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/16 20:20:54 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h> 
-#include <unistd.h>
-#include <ctype.h>
-#include <string.h>
+#include "libft.h"
 
 void ft_bzero(void *s, size_t n)
 {

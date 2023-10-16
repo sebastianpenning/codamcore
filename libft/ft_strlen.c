@@ -6,13 +6,11 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/04 13:57:49 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/16 20:06:21 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/16 20:25:25 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h> 
-#include <unistd.h>
-#include <ctype.h>
+#include "libft.h"
 
 size_t ft_strlen(const char *s)
 {

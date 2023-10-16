@@ -6,16 +6,11 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/08 12:50:37 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/16 20:04:55 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/16 20:24:38 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h> 
-#include <unistd.h>
-#include <ctype.h>
-#include <string.h>
-#include <stdlib.h>
-#include <bsd/string.h>
+#include "libft.h"
 
 char *ft_strchr(const char *s, int c)
 {

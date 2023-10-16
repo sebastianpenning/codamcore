@@ -6,16 +6,11 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/12 13:31:02 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/16 20:04:51 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/16 20:24:28 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <string.h>
-#include <stdlib.h>
-#include <bsd/string.h>
-#include "ft_strchr.c"
-#include "ft_strlcpy.c"
+#include "libft.h"
 
 static int free_all(char **allocation_array, size_t alc_index)
 {

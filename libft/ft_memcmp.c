@@ -6,18 +6,11 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/08 18:35:03 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/16 20:03:46 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/16 20:23:05 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
-#include <unistd.h>
-#include <ctype.h>
-#include <string.h>
-#include <stdlib.h>
-#include <bsd/string.h>
-#include "ft_strlen.c"
+#include "libft.h"
 
 int ft_memcmp(const void *s1, const void *s2, size_t n)
 {

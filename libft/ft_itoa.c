@@ -6,15 +6,11 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/15 17:23:57 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/16 20:03:35 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/16 20:22:37 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <string.h>
-#include <stdlib.h>
-#include <stdio.h>
-
+#include "libft.h"
 
 static void putnmbr(char * string, long int numbers, int totalsize)
 {

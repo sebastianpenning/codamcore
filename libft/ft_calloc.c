@@ -6,16 +6,11 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/10 19:35:40 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/16 20:03:04 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/16 20:21:04 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <string.h>
-#include <stdlib.h>
-#include <bsd/string.h>
-#include "ft_strlen.c"
-#include "ft_strncmp.c"
+#include "libft.h"
 
 void * ft_calloc(size_t nmemb, size_t size)
 {

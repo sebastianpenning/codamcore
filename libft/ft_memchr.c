@@ -6,16 +6,11 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/08 18:06:38 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/16 20:03:39 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/16 20:22:47 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <ctype.h>
-#include <string.h>
-#include <stdlib.h>
-#include <bsd/string.h>
-#include "ft_strlen.c"
+#include "libft.h"
 
 void * ft_memchr(const void *s, int c, size_t n)
 {	

@@ -6,13 +6,11 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/04 14:52:21 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/16 20:05:38 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/16 20:28:13 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h> 
-#include <unistd.h>
-#include <ctype.h>
+#include "libft.h"
 
 int ft_tolower(int c)
 {

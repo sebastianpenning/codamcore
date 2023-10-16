@@ -6,16 +6,11 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/08 16:15:25 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/16 20:06:07 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/16 20:25:38 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <ctype.h>
-#include <string.h>
-#include <stdlib.h>
-// #include <bsd/string.h>
-// #include "ft_strlen.c"
+#include "libft.h"
 
 int ft_strncmp(const char *s1, const char *s2, size_t n)
 {

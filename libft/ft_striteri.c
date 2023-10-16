@@ -6,15 +6,11 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/15 21:56:09 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/16 20:05:17 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/16 20:25:00 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <string.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include "ft_strlen.c"
+#include "libft.h"
 
 void ft_striteri (char *s, void (*f)(unsigned int, char*))
 {

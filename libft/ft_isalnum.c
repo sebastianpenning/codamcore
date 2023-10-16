@@ -6,12 +6,11 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/04 14:00:52 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/16 20:03:08 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/16 20:21:10 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <ctype.h>
+#include "libft.h"
 
 int	ft_isalnum(int c)
 {
