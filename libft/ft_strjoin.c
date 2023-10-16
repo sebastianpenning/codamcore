@@ -6,7 +6,7 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/11 19:03:23 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/16 20:25:06 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/16 20:59:22 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ char *ft_strjoin(char const *s1, char const *s2)
 		s2_index++;
 	}
 	ns_cptr[s1_index] = '\0';
-	if (strlen(ns_cptr) != len_s1 + len_s2)
+	if (ft_strlen(ns_cptr) != len_s1 + len_s2)
 	{
 		return(NULL);
 	}
