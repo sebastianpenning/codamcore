@@ -6,7 +6,7 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/10 21:36:05 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/11 19:27:44 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/16 20:05:44 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,17 +41,4 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	ns_cptr[index] = '\0';
 	return(ns_cptr);
-}
-
-int main()
-{
-	const char firstTest1[10] = "ABA ABA";
-
-	printf("%s\n", ft_substr(firstTest1, 2, 2));
-	printf("%s\n", ft_substr(firstTest1, 1, 1));
-	printf("%s\n", ft_substr(firstTest1, 2, 3));
-	printf("%s\n", ft_substr(firstTest1, 5, 0));
-	printf("%s\n", ft_substr(firstTest1, 5, 3));
-
-	return(0);
 }

@@ -6,7 +6,7 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/04 13:57:49 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/16 19:21:09 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/16 20:06:21 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,16 +32,3 @@ size_t ft_strlen(const char *s)
         return index;
     }
 }
-
-
-// int main (){
-//     char test1[20] = "test1";
-//     char test2[20] = "test12";
-//     char test3[20] = "test123";
-
-//     printf("\nThis is the results: %d", ft_strlen(test1));
-//     printf("\nThis is the results: %d", ft_strlen(test2));
-//     printf("\nThis is the results: %d", ft_strlen(test3));
-
-//     return(0);
-// }

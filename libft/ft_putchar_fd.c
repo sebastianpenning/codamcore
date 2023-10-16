@@ -6,7 +6,7 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/12 18:10:24 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/12 20:59:25 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/16 20:04:25 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,3 @@ void ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
-
-
-// int main()
-// {
-// 	ft_putchar_fd('c', 2);	
-// 	return(0);
-// }

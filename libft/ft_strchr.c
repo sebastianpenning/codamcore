@@ -6,7 +6,7 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/08 12:50:37 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/14 19:27:19 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/16 20:04:55 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,17 +43,3 @@ char *ft_strchr(const char *s, int c)
 	return_cptr = NULL;
 	return(return_cptr);
 }
-
-// int main ()
-// {
-// 	const char test1[30] = "?ent the two following func";
-// 	const char test2[30] = "ent the two/ following func";	
-// 	const char test3[30] = "ent the two following func";
-// 	const char test4[30] = " djd\0ioewj";	
-
-// 	printf("%s\n", ft_strchr(test1, '?'));
-// 	printf("%s\n", ft_strchr(test2, '/'));
-// 	//printf("%s\n", ft_strchr(test3, '!'));
-// 	printf("%s\n", ft_strchr(test4, '\0'));
-// }
-

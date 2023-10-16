@@ -6,7 +6,7 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/10 20:35:22 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/11 19:26:14 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/16 20:05:03 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,19 +40,4 @@ char *ft_strdup(const char *s)
 	}
 	ns_cptr[index] = '\0';
 	return(ns_cptr);
-}
-
-int main ()
-{
-	const char test1[20] = "5";
-	const char test2[20] = "120";
-	const char test3[20] = "bobo";
-
-	printf("%s\n", strdup(test1));
-	printf("%s\n", ft_strdup(test1));
-	printf("%s\n", strdup(test2));
-	printf("%s\n", ft_strdup(test2));
-	printf("%s\n", strdup(test3));
-	printf("%s\n", ft_strdup(test3));
-	return(0);
 }

@@ -6,7 +6,7 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/12 13:31:02 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/15 16:49:40 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/16 20:04:51 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -156,42 +156,4 @@ char ** ft_split(char const *s, char c)
 	return_arr[split_sum] = NULL;
 
 	return(return_arr);
-}
-
-
-int main ()
-{
-	const char firstTest1[15] = "ABABABA";
-	const char firstTest2[10] = "AABA!AAB";
-	const char firstTest3[16] = "BBBABBABABABABA";
-	const char firstTest4[10] = "AA ABA";
-
-	char secondTest1 = 'B';
-	char secondTest2 = '!';
-	char secondTest3 = 'B';
-	char secondTest4 = ' ';
-
-	char ** resulttest;
-
-	int index;
-	size_t sumresult;
-
-	index = 0;
-
-	resulttest = ft_split(firstTest3, secondTest3);
-	sumresult = sumsplit(firstTest3, secondTest3);
-	
-	sumresult = sumresult;
-	printf("%ld\n", sumresult);
-
-
-	// while (index < sumresult)
-	// {
-	// 	printf("%s\n", resulttest[sumresult]);
-	// 	free(resulttest[sumresult]);
-	// 	sumresult--;
-	// }
-	// free(resulttest);
-
-	return (0);
 }

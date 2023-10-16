@@ -6,7 +6,7 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/09 18:54:25 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/10 19:06:58 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/16 20:05:58 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,24 +49,3 @@ char * ft_strnstr(const char *big, const char *little, size_t len)
 	return(NULL);
 }
 
-
-int main ()
-{	
-	const char littletest1[20] = "    ";
-	const char littletest2[20] = "";
-	const char littletest3[20] = "bobo";
-
-
-	const char bigtest1[20] = "dsjc    dsjalka";
-	const char bigtest2[20] = "dsjc    dsjalka";
-	const char bigtest3[10] = "dsjc    ";
-
-	printf("%s\n", strnstr(bigtest1, littletest1, 20));
-	printf("%s\n", ft_strnstr(bigtest2, littletest1, 20));
-	printf("%s\n", strnstr(bigtest2, littletest2, 20));
-	printf("%s\n", ft_strnstr(bigtest2, littletest2, 20));
-	printf("%s\n", strnstr(bigtest3, littletest3, 20));
-	printf("%s\n", ft_strnstr(bigtest3, littletest3, 20));
-
-	return (0);
-}

@@ -6,7 +6,7 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/11 19:03:23 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/11 19:36:31 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/16 20:05:20 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,29 +56,4 @@ char *ft_strjoin(char const *s1, char const *s2)
 		return(NULL);
 	}
 	return(ns_cptr);
-}
-
-int main ()
-{
-
-	const char firstTest1[10] = "B";
-	const char firstTest2[10] = "";
-	const char firstTest3[10] = "ABA ABA";
-	const char firstTest4[10] = "ABA ABA";
-	const char firstTest5[10] = "ABA ABA";
-
-
-	const char secondTest1[10] = "A";
-	const char secondTest2[10] = "ABA ABA";
-	const char secondTest3[10] = "ABAZABA";
-	const char secondTest4[10] = "ABA ABAA";
-	const char secondTest5[9] = "ABA ABAA";
-
-
-	printf("%s\n", ft_strjoin(firstTest1, secondTest1));
-	printf("%s\n", ft_strjoin(firstTest2, secondTest2));
-	printf("%s\n", ft_strjoin(firstTest3, secondTest3));
-	printf("%s\n", ft_strjoin(firstTest4, secondTest4));
-
-	return(0);
 }

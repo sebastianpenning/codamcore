@@ -6,7 +6,7 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/04 14:00:52 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/15 22:19:32 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/16 20:03:08 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,17 +26,3 @@ int	ft_isalnum(int c)
 	}
 }
 
-
-int main ()
-{
-	int var1 = 'c';
-	int var2 = '1';
-	int var3 = ']';
-	int var4 = '@';
-
-	printf("\nThe result is %d", ft_isalnum(var1));
-	printf("\nThe result is %d", ft_isalnum(var2));
-	printf("\nThe result is %d", ft_isalnum(var3));
-	printf("\nThe result is %d", ft_isalnum(var4));
-	return (0);
-}

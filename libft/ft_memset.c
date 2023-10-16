@@ -6,7 +6,7 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/04 14:32:28 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/16 19:19:11 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/16 20:04:15 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,33 +29,4 @@ void *ft_memset(void *s, int c, size_t n)
 		index++;
 	}
 	return(cptr);
-	// printf("%c\n", cptr[0]);
-	// printf("%d\n", charachter);
-	// printf("%ld\n", size);
-}
-
-
-int main ()
-{
-	char str1[50];
-	char str2[50];
-	char str3[50];
-	char str4[50];
-
-	strcpy(str1, "test 1 test 2 test 3");
-	strcpy(str2, "This is the number of bytes");
-	strcpy(str3, "char conversion of this value");
-	strcpy(str4, "set(void *str, int c, size_t ");
-
-	ft_memset(str1, ' ', 2);
-	printf("%s\n", str1);
-	ft_memset(str2, '%', 20);
-	printf("%s\n", str2);
-	ft_memset(str3, 'd', 5);
-	printf("%s\n", str3);
-	ft_memset(str4, '?', 8);
-	printf("%s\n", str4);
-
-
-	return(0);
 }

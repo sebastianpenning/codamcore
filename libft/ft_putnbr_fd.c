@@ -6,7 +6,7 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/12 19:34:43 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/12 20:59:01 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/16 20:04:42 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,4 @@ void ft_putnbr_fd(int d, int fd)
 		}
 		ft_putchar_fd(48 + (ld % 10), fd);
 	}
-}
-
-int main ()
-{
-	int test = 1235;
-	ft_putnbr_fd(test, 2);
-
-	return(0);
 }

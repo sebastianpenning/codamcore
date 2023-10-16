@@ -6,7 +6,7 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/08 18:35:03 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/08 20:11:18 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/16 20:03:46 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,33 +45,4 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
 		// printf("%d\n", returnval);
 	}
 	return(returnval);
-}
-
-int main ()
-{
-	const char firstTest1[10] = "B\200";
-	const char firstTest2[10] = "";
-	const char firstTest3[10] = "ABA ABA";
-	const char firstTest4[10] = "ABA ABA";
-	const int firstTest5[10] = {1, 2, 3, 4, 5};
-
-
-	const char secondTest1[10] = "A";
-	const char secondTest2[10] = "ABA ABA";
-	const char secondTest3[10] = "ABAZABA";
-	const char secondTest4[10] = "ABA ABAA";
-	const int secondTest5[10] = {1, 2, 3, 4};
-
-	printf("%d\n", memcmp(firstTest1, secondTest1, sizeof(char) *10));
-	printf("%d\n", ft_memcmp(firstTest1, secondTest1, sizeof(char) *10));
-	printf("%d\n", memcmp(firstTest2, secondTest2, sizeof(char) *10));
-	printf("%d\n", ft_memcmp(firstTest2, secondTest2, sizeof(char) *10));
-	printf("%d\n", memcmp(firstTest3, secondTest3, sizeof(char) *10));
-	printf("%d\n", ft_memcmp(firstTest3, secondTest3, 10));
-	printf("%d\n", memcmp(firstTest4, secondTest4, sizeof(char) *10));
-	printf("%d\n", ft_memcmp(firstTest4, secondTest4, 10));
-	printf("%d\n", memcmp(firstTest5, secondTest5, sizeof(int) *10));
-	printf("%d\n", ft_memcmp(firstTest5, secondTest5, sizeof(int) *10));
-
-	return(0);
 }
