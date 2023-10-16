@@ -6,7 +6,7 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/12 13:31:02 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/16 20:24:28 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/16 20:57:58 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -137,9 +137,7 @@ static size_t sumsplit(char const *str, char ch)
 
 char ** ft_split(char const *s, char c)
 {
-	size_t len_s;
 	size_t split_sum;
-
 	char ** return_arr;
 
 	split_sum = sumsplit(s, c);
