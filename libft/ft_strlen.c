@@ -6,7 +6,7 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/04 13:57:49 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/07 20:36:34 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/16 19:21:09 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 #include <unistd.h>
 #include <ctype.h>
 
-size_t ft_strlen(const char *s){
+size_t ft_strlen(const char *s)
+{
     if (s[0] == '\0')
     {
         return(0);

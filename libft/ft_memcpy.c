@@ -6,7 +6,7 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/06 21:30:56 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/06 22:33:28 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/16 19:18:48 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,6 @@
 #include <string.h>
 #include <stdlib.h>
 
-
-//moeten hier niet misschien ook void pointers gebruikt worden in plaats van char pointers 
-//omdat arrays verschillende datatypes gebruiken?
 
 void *ft_memcpy(void *dest, const void *src, size_t n)
 {
