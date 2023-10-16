@@ -6,7 +6,7 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/07 20:43:08 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/16 20:25:12 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/16 21:01:04 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ size_t ft_strlcat(char *dst, const char *src, size_t size)
 	const char * src_cptr;
 
 	index = 0;
-	src_len = strlen(src);
-	dst_len = strlen(dst);
+	src_len = ft_strlen(src);
+	dst_len = ft_strlen(dst);
 	sum_len = src_len + dst_len;
 	src_cptr = (char*)src;
 	while (index <= src_len - 1)
