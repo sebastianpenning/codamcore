@@ -6,7 +6,7 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/06 21:30:56 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/16 20:23:19 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/17 20:21:46 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void *ft_memcpy(void *dest, const void *src, size_t n)
 	src_cptr = (char *)src;
 	dest_cptr = (char *)dest;
 
-	while (index <= n)
+	while (index < n)
 	{
 		dest_cptr[index] = src_cptr[index];
 		index++;
