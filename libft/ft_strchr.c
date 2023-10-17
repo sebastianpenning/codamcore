@@ -6,11 +6,14 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/08 12:50:37 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/16 20:24:38 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/17 20:58:08 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+// added % 256 to make sure a character in ascii
+// is checked
 
 char *ft_strchr(const char *s, int c)
 {
@@ -20,6 +23,7 @@ char *ft_strchr(const char *s, int c)
 
 	index = 0;
 	s_cptr = (char*)s;
+	c = c % 256;
 
 	while (s_cptr[index] != '\0')
 	{
