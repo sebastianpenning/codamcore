@@ -6,7 +6,7 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/06 22:35:47 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/16 20:23:26 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/17 20:24:02 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,13 @@ void *ft_memmove(void *dest, const void *src, size_t n)
 	src_cptr = (char *)src;
 	long unsigned int index;
 	index = 0;
-	while (index <= n)
+	while (index < n)
 	{
 		temp[index] = src_cptr[index];
 		index++;	
 	}
 	index =0;
-	while (index <= n)
+	while (index < n)
 	{
 		dest_cptr[index] = temp[index];	
 		index++;
