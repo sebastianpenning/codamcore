@@ -1,5 +1,6 @@
 
-// #include <libft.h>
+#include <stdio.h>
+#include "ft_strlcat.o"
 
 
 // int test_atoi ()
@@ -418,41 +419,37 @@
 // 	return(0);
 // }
 
-// int test_strlcat ()
-// {	
-// 	const char src_test1[24] = "here is the man pa defin";
-// 	const char src_test2[25] = "here is the man pa defin";
-// 	const char src_test3[25] = "here is the man pa defin";
+int test_strlcat ()
+{	
+	const char src_test1[10] = "AAAAAAAAA";
+	const char src_test2[25] = "here is the man pa defin";
+	const char src_test3[25] = "here is the man pa defin";
 
 
-// 	char dest_test1[100] = "py or not; develop";
-// 	char dest_test2[80] = "py or not; develop";
-// 	char dest_test3[2];
+	char dest_test1[30] = "B";
+	char dest_test2[80] = "py or not; develop";
+	char dest_test3[2];
 
-// 	size_t len1;
-// 	size_t len2;
-// 	len1 = strlen(src_test1);
-// 	len2 = strlen(dest_test1);
-// 	printf("%ld\n", len1 + len2);
-
-// 	printf("%ld\n", ft_strlcat(dest_test1, src_test1, 50));
-// 	printf("%s\n", dest_test1);
-// 	printf("%ld\n", ft_strlcat(dest_test1, src_test1, 100));
-// 	printf("%s\n", dest_test1);
+	printf("%zu\n", ft_strlcat(dest_test1, src_test1, 50));
+	printf("%s\n", dest_test1);
+	// printf("%ld\n", strlcat(dest_test1, src_test1, 50));
+	// printf("%s\n", dest_test1);
+	// printf("%ld\n", ft_strlcat(dest_test1, src_test1, 100));
+	// printf("%s\n", dest_test1);
 	
-// 	printf("%ld\n", ft_strlcat(dest_test2, src_test2, 30));
-// 	printf("%s\n", dest_test2);
-// 	printf("%ld\n", strlcat(dest_test2, src_test2, 30));
-// 	printf("%s\n", dest_test2);
+	// printf("%ld\n", ft_strlcat(dest_test2, src_test2, 30));
+	// printf("%s\n", dest_test2);
+	// printf("%ld\n", strlcat(dest_test2, src_test2, 30));
+	// printf("%s\n", dest_test2);
 
-// 	printf("%ld\n", ft_strlcat(dest_test3, src_test3, 2));
-// 	printf("%s\n", dest_test3);
-// 	printf("%ld\n", strlcat(dest_test3, src_test3, 2));
-// 	printf("%s\n", dest_test3);
+	// printf("%ld\n", ft_strlcat(dest_test3, src_test3, 2));
+	// printf("%s\n", dest_test3);
+	// printf("%ld\n", strlcat(dest_test3, src_test3, 2));
+	// printf("%s\n", dest_test3);
 
 
-// 	return(0);
-// }
+	return(0);
+}
 
 // int test_strlcpy ()
 // {
@@ -653,11 +650,11 @@
 
 
 
-// int main()
-// {
+int main()
+{
+	test_strlcat();
 
 
 
-
-// 	return(0);
-// }
+	return(0);
+}
