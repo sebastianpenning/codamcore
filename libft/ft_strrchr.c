@@ -6,7 +6,7 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/08 15:39:04 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/16 20:25:50 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/17 21:03:10 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,14 @@ char * ft_strrchr (const char* s, int c)
 	char * return_cptr;
 	s_cptr = (char*)s;
 	index = ft_strlen(s);
+	c = c % 256;
 
 	if (c == '\0')
 	{
 		return_cptr = &s_cptr[index];
 		return(return_cptr);
 	}
-	while (index > 0)
+	while (index >= 0)
 	{
 		if (s_cptr[index] == c)
 		{
