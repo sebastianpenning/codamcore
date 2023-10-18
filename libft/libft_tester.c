@@ -1,7 +1,8 @@
 
 #include <stdio.h>
-#include "ft_strlcat.o"
-
+#include <string.h>
+#include <bsd/string.h>
+#include "libft.h"
 
 // int test_atoi ()
 // {
@@ -419,37 +420,37 @@
 // 	return(0);
 // }
 
-int test_strlcat ()
-{	
-	const char src_test1[10] = "AAAAAAAAA";
-	const char src_test2[25] = "here is the man pa defin";
-	const char src_test3[25] = "here is the man pa defin";
+// int test_strlcat ()
+// {	
+// 	const char src_test1[10] = "AAAAAAAAA";
+// 	const char src_test2[25] = "here is the man pa defin";
+// 	const char src_test3[25] = "here is the man pa defin";
 
 
-	char dest_test1[30] = "B";
-	char dest_test2[80] = "py or not; develop";
-	char dest_test3[2];
+// 	char dest_test1[30] = "B";
+// 	char dest_test2[80] = "py or not; develop";
+// 	char dest_test3[2];
 
-	printf("%zu\n", ft_strlcat(dest_test1, src_test1, 50));
-	printf("%s\n", dest_test1);
-	// printf("%ld\n", strlcat(dest_test1, src_test1, 50));
-	// printf("%s\n", dest_test1);
-	// printf("%ld\n", ft_strlcat(dest_test1, src_test1, 100));
-	// printf("%s\n", dest_test1);
+// 	printf("%zu\n", ft_strlcat(dest_test1, src_test1, 50));
+// 	printf("%s\n", dest_test1);
+// 	// printf("%ld\n", strlcat(dest_test1, src_test1, 50));
+// 	// printf("%s\n", dest_test1);
+// 	// printf("%ld\n", ft_strlcat(dest_test1, src_test1, 100));
+// 	// printf("%s\n", dest_test1);
 	
-	// printf("%ld\n", ft_strlcat(dest_test2, src_test2, 30));
-	// printf("%s\n", dest_test2);
-	// printf("%ld\n", strlcat(dest_test2, src_test2, 30));
-	// printf("%s\n", dest_test2);
+// 	// printf("%ld\n", ft_strlcat(dest_test2, src_test2, 30));
+// 	// printf("%s\n", dest_test2);
+// 	// printf("%ld\n", strlcat(dest_test2, src_test2, 30));
+// 	// printf("%s\n", dest_test2);
 
-	// printf("%ld\n", ft_strlcat(dest_test3, src_test3, 2));
-	// printf("%s\n", dest_test3);
-	// printf("%ld\n", strlcat(dest_test3, src_test3, 2));
-	// printf("%s\n", dest_test3);
+// 	// printf("%ld\n", ft_strlcat(dest_test3, src_test3, 2));
+// 	// printf("%s\n", dest_test3);
+// 	// printf("%ld\n", strlcat(dest_test3, src_test3, 2));
+// 	// printf("%s\n", dest_test3);
 
 
-	return(0);
-}
+// 	return(0);
+// }
 
 // int test_strlcpy ()
 // {
@@ -652,8 +653,13 @@ int test_strlcat ()
 
 int main()
 {
-	test_strlcat();
+	// test_strlcat();
 
+	char src[] = "coucou";
+	char dest[10]; memset(dest, 'A', 10);
+
+	// printf("%ld\n", strlcpy(dest, src, -1));
+	printf("%ld\n", ft_strlcpy(dest, src, -1));
 
 
 	return(0);

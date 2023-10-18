@@ -46,49 +46,49 @@ size_t ft_strlcat(char *dst, const char *src, size_t size)
 	return(src_len + size);
 }
 
-int main ()
-{	
-	const char src_test1[10] = "AAAAAAAAA";
-	const char src_test2[25] = "here is the man pa defin";
-	const char src_test3[25] = "here is the man pa defin";
+// int main ()
+// {	
+// 	const char src_test1[10] = "AAAAAAAAA";
+// 	const char src_test2[25] = "here is the man pa defin";
+// 	const char src_test3[25] = "here is the man pa defin";
 
 
-	char dest_test1[30] = "CCCCC";
-	char dest_test2[80] = "py or not; develop";
-	char dest_test3[2];
+// 	char dest_test1[30] = "CCCCC";
+// 	char dest_test2[80] = "py or not; develop";
+// 	char dest_test3[2];
 
-	// printf("%zu\n", ft_strlcat(dest_test1, src_test1, -1));
-	// printf("%s\n", dest_test1);
-	printf("%zu\n", strlcat(dest_test1, src_test1, 6));
-	printf("%s\n", dest_test1);
-	// printf("%ld\n", ft_strlcat(dest_test1, src_test1, 100));
-	// printf("%s\n", dest_test1);
+// 	// printf("%zu\n", ft_strlcat(dest_test1, src_test1, -1));
+// 	// printf("%s\n", dest_test1);
+// 	printf("%zu\n", strlcat(dest_test1, src_test1, 6));
+// 	printf("%s\n", dest_test1);
+// 	// printf("%ld\n", ft_strlcat(dest_test1, src_test1, 100));
+// 	// printf("%s\n", dest_test1);
 	
-	// printf("%ld\n", ft_strlcat(dest_test2, src_test2, 30));
-	// printf("%s\n", dest_test2);
-	// printf("%ld\n", strlcat(dest_test2, src_test2, 30));
-	// printf("%s\n", dest_test2);
+// 	// printf("%ld\n", ft_strlcat(dest_test2, src_test2, 30));
+// 	// printf("%s\n", dest_test2);
+// 	// printf("%ld\n", strlcat(dest_test2, src_test2, 30));
+// 	// printf("%s\n", dest_test2);
 
-	// printf("%ld\n", ft_strlcat(dest_test3, src_test3, 2));
-	// printf("%s\n", dest_test3);int main ()
+// 	// printf("%ld\n", ft_strlcat(dest_test3, src_test3, 2));
+// 	// printf("%s\n", dest_test3);int main ()
 
-	// printf("%zu\n", strlcat(dest_test1, src_test1, 0));
-	// printf("%s\n", dest_test1);
-	// printf("%ld\n", ft_strlcat(dest_test1, src_test1, 100));
-	// printf("%s\n", dest_test1);
+// 	// printf("%zu\n", strlcat(dest_test1, src_test1, 0));
+// 	// printf("%s\n", dest_test1);
+// 	// printf("%ld\n", ft_strlcat(dest_test1, src_test1, 100));
+// 	// printf("%s\n", dest_test1);
 	
-	// printf("%ld\n", ft_strlcat(dest_test2, src_test2, 30));
-	// printf("%s\n", dest_test2);
-	// printf("%ld\n", strlcat(dest_test2, src_test2, 30));
-	// printf("%s\n", dest_test2);
+// 	// printf("%ld\n", ft_strlcat(dest_test2, src_test2, 30));
+// 	// printf("%s\n", dest_test2);
+// 	// printf("%ld\n", strlcat(dest_test2, src_test2, 30));
+// 	// printf("%s\n", dest_test2);
 
-	// printf("%ld\n", ft_strlcat(dest_test3, src_test3, 2));
-	// printf("%s\n", dest_test3);
-	// printf("%ld\n", strlcat(dest_test3, src_test3, 2));
-	// printf("%s\n", dest_test3);
+// 	// printf("%ld\n", ft_strlcat(dest_test3, src_test3, 2));
+// 	// printf("%s\n", dest_test3);
+// 	// printf("%ld\n", strlcat(dest_test3, src_test3, 2));
+// 	// printf("%s\n", dest_test3);
 
 
-	return(0);
-}
+// 	return(0);
+// }
 
 
