@@ -6,7 +6,7 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/09 18:54:25 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/16 20:25:43 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/19 16:49:09 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char * ft_strnstr(const char *big, const char *little, size_t len)
 {
 	char * l_cptr;
 	char * b_cptr;
-	int little_len;
+	size_t little_len;
 	size_t index;
 
 	l_cptr = (char *)little;
@@ -30,17 +30,11 @@ char * ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	while (b_cptr[index] != '\0' && index < len)
 	{
-		// printf("%d\n", ft_strncmp(l_cptr, b_cptr+ index, little_len -1));
-		// printf("%s\n", l_cptr);
-		// printf("%s\n", b_cptr+ index);
-		// printf("%d\n", little_len);
-		// printf("%s\n", "---------");
-		if (ft_strncmp(l_cptr, b_cptr+ index, little_len -1) == 0)
-		{
+		if((little_len + index) > len)
+			return(NULL);
+		if (ft_strncmp(l_cptr, b_cptr+ index, little_len) == 0)
 			return(b_cptr+index);
-		}
 		index++;
 	}
 	return(NULL);
 }
-
