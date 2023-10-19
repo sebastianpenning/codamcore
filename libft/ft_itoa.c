@@ -6,7 +6,7 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/15 17:23:57 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/19 22:02:13 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/19 23:18:00 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 static void putnmbr(char * string, long int numbers, int totalsize)
 {
+	if(numbers < 0)
+		numbers = numbers * -1;
 	if (numbers > 0)
 	{
 		putnmbr(string, numbers / 10, totalsize - 1);
@@ -25,7 +27,11 @@ static int size_counter(long int ln)
 {
 	int size;
 	size = 0;
-
+	if (ln < 0)
+	{
+		size++;
+		ln = ln * -1;
+	}
 	while (ln > 9)
 	{
 		ln = ln / 10;
@@ -36,29 +42,21 @@ static int size_counter(long int ln)
 
 char* ft_itoa(int n)
 {
-	long int ln;
+	long ln;
 	int count_size;
 	char * return_str;
 
-	ln = (long int)n;
+	ln = n;
 	count_size = size_counter(ln);
-	if (n < 0)
-	{
-		count_size = count_size + 2;
-		return_str = malloc(sizeof(char) * (count_size + 2));
+	count_size = count_size + 1;
+	return_str = malloc(sizeof(char) * (count_size + 1));
+	if (!return_str)
+		return(NULL);
+	if(n < 0)
 		return_str[0] = '-';
-	}
-	else
-	{
-		count_size = count_size + 1;
-		return_str = malloc(sizeof(char) * (count_size + 1));
-	}
 	putnmbr(return_str, ln, count_size); 
+	if(n == 0)
+		return_str[0] = 48 + 0;	
 	return_str[count_size] = '\0';
 	return(return_str);
 }
-
-// int main ()
-// {
-	
-// }
