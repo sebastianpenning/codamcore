@@ -6,7 +6,7 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/15 17:23:57 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/19 20:33:47 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/19 22:02:13 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ char* ft_itoa(int n)
 	return(return_str);
 }
 
-int main ()
-{
+// int main ()
+// {
 	
-}
+// }

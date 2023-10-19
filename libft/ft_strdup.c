@@ -6,7 +6,7 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/10 20:35:22 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/16 20:24:48 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/19 21:59:58 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,11 @@ char *ft_strdup(const char *s)
 
 	ns_vptr = malloc(s_len + 1);
 	ns_cptr = (char *)ns_vptr;
+	if(!ns_cptr)
+		return(NULL);
 	index = 0;
 
-	while (index <= s_len)
+	while (s_cptr[index] != '\0')
 	{
 		ns_cptr[index] = s_cptr[index];
 		index++; 
