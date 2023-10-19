@@ -6,7 +6,7 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/15 17:23:57 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/16 20:52:00 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/19 20:33:47 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,4 +56,9 @@ char* ft_itoa(int n)
 	putnmbr(return_str, ln, count_size); 
 	return_str[count_size] = '\0';
 	return(return_str);
+}
+
+int main ()
+{
+	
 }
