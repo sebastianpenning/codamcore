@@ -6,20 +6,16 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/10 19:06:39 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/19 18:38:14 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/19 19:13:44 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-// #include <bsd/string.h>
-// #include <stdio.h>
-// #include "ft_strlen.c"
-// #include "ft_isdigit.c"
 
 
 static char * skipwhitespaces(char * c_ptr)
 {
-	while ((*c_ptr > 8 && *c_ptr < 14) || *c_ptr == 0)
+	while ((*c_ptr > 8 && *c_ptr < 14) || *c_ptr == 0 || *c_ptr == 32)
 	{
 		c_ptr++;
 	}
@@ -62,14 +58,14 @@ int ft_atoi(const char *nptr)
 
 	result = 0;
 	index = 0;
-
 	c_ptr = skipwhitespaces(c_ptr);
 	flag = detect_plusmignus(c_ptr);
 
-	while (c_ptr[index] != '\0')
+	if (flag == 1 || flag == 2)
+		c_ptr++;
+	while (c_ptr[index] != 0 && (c_ptr[index] > 47) && (c_ptr[index] < 58))
 	{
-		if ((c_ptr[index] > 47) && (c_ptr[index] < 58))
-			result = result * 10 + (c_ptr[index] - 48); 
+		result = result * 10 + (c_ptr[index] - 48);
 		index++;
 	}
 	if (flag == 1)
@@ -80,12 +76,3 @@ int ft_atoi(const char *nptr)
 		return(result);
 	return(0);
 }
-
-// int main()
-// {
-//     char e[10] = "-1\t\n\v\f\r\042";
-
-// 	printf("%d",ft_atoi(e));
-	
-// 	return(0);
-// }
