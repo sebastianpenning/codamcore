@@ -6,28 +6,86 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/10 19:06:39 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/16 20:20:41 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/19 18:38:14 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+// #include <bsd/string.h>
+// #include <stdio.h>
+// #include "ft_strlen.c"
+// #include "ft_isdigit.c"
+
+
+static char * skipwhitespaces(char * c_ptr)
+{
+	while ((*c_ptr > 8 && *c_ptr < 14) || *c_ptr == 0)
+	{
+		c_ptr++;
+	}
+	return(c_ptr);
+}
+
+
+
+static int detect_plusmignus(char * c_ptr)
+{
+	size_t plus_flag;
+	size_t minus_flag;
+
+	plus_flag = 0;
+	minus_flag = 0;
+
+	if (*c_ptr == '+')
+		plus_flag = plus_flag + 1;
+	if (*c_ptr == '-')
+		minus_flag = minus_flag + 1;
+
+	if (minus_flag == 1 && (ft_isdigit(c_ptr[1]) == 1))
+		return(1);
+	if (plus_flag == 1 && (ft_isdigit(c_ptr[1]) == 1))
+		return(2);
+	if (minus_flag == 0 && plus_flag== 0 && (ft_isdigit(*c_ptr) == 1))
+		return(3);
+	if (minus_flag == 0 && plus_flag== 0 && c_ptr[1] == 0)
+		return(3);
+	return(4);
+}
 
 int ft_atoi(const char *nptr)
 {
 	int result;
 	int index;
+	int flag;
 	char * c_ptr;
 	c_ptr = (char *)nptr;
+
 	result = 0;
 	index = 0;
 
+	c_ptr = skipwhitespaces(c_ptr);
+	flag = detect_plusmignus(c_ptr);
+
 	while (c_ptr[index] != '\0')
 	{
-		if ((int)c_ptr[index] > 47 && (int)c_ptr[index] < 58)
-		{
-			result = result * 10 + ((int)c_ptr[index] - 48); 
-		}
+		if ((c_ptr[index] > 47) && (c_ptr[index] < 58))
+			result = result * 10 + (c_ptr[index] - 48); 
 		index++;
 	}
-	return(result);
+	if (flag == 1)
+		return(result * -1);
+	if (flag == 2)
+		return(result);
+	if (flag == 3)
+		return(result);
+	return(0);
 }
+
+// int main()
+// {
+//     char e[10] = "-1\t\n\v\f\r\042";
+
+// 	printf("%d",ft_atoi(e));
+	
+// 	return(0);
+// }
