@@ -6,14 +6,15 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/16 20:08:31 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/16 20:22:04 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/20 22:49:42 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h" 
 
 
-int ft_isdigit(int c){
+int ft_isdigit(int c)
+{
     if (c > 47 && c < 58)
     {
         return (1);
