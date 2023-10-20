@@ -6,7 +6,7 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/12 13:31:02 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/20 22:08:17 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/20 22:48:42 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -144,12 +144,14 @@ char ** ft_split(char const *s, char c)
 	char ** return_arr;
 	
 	split_sum = count_words(s, c);
-	split_sum = split_sum + 1;
-	return_arr = (char**)malloc((sizeof(char*) * split_sum));
-	return_arr = create_splits(return_arr, s, c, split_sum);
+	// printf("%zu\n", split_sum);
+	return_arr = (char**)malloc(sizeof(char*) * (split_sum + 1));
+	// printf("%zu\n", split_sum);
+	// printf("%zu\n", sizeof(char*) * split_sum);
+	return_arr = create_splits(return_arr, s, c, (split_sum));
 	if (return_arr == NULL)
 		return(NULL);
-	return_arr[split_sum] = "\0";
+	return_arr[split_sum] = NULL;
 	return(return_arr);
 }
 
@@ -158,10 +160,11 @@ char ** ft_split(char const *s, char c)
 // 	char * * tab = ft_split("  tripouille  42  ", ' ');
 // 	printf("%d\n", !strcmp(tab[0], "tripouille"));
 // 	printf("%s\n", tab[0]);
-// 	printf("%s\n", tab[1]);
+// 	// printf("%s\n", tab[1]);
 // 	printf("%s\n", tab[2]);
-// 	if (tab[1] == NULL)
+// 	if (tab[2] == NULL)
 // 	{
 // 		printf("%s\n", "is null");
 // 	}
+
 // }
