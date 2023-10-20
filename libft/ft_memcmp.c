@@ -6,7 +6,7 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/08 18:35:03 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/16 20:23:05 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/20 20:04:49 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,6 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
 			return(*(s1_cptr+ index) - *(s2_cptr +index));
 		}
 		index++;
-		// printf("%ld\n", index);
-		// printf("%d\n", returnval);
 	}
 	return(returnval);
 }
