@@ -6,7 +6,7 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/08 16:15:25 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/21 20:03:22 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/21 23:22:26 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,8 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	s2_len = ft_strlen(s2);
 	while (index < n && (index < s1_len || index < s2_len))
 	{
-		returnval = returnval + (s1[index] - s2[index]);
+		if((unsigned char)s1[index] != (unsigned char)s2[index])
+			return ((unsigned char)s1[index] - (unsigned char)s2[index]);
 		index++;
 	}
 	return (returnval);

@@ -6,7 +6,7 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/16 20:08:13 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/21 14:27:05 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/21 23:31:37 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,9 @@
 
 int	ft_isalpha(int c)
 {
-	c = c % 256;
 	if (((c > 64) && (c < 91)) || ((c > 96) && (c < 123)))
 	{
-		return (c - 47);
+		return (1);
 	}
 	else
 	{
