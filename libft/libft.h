@@ -6,7 +6,7 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/21 23:03:23 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/21 23:09:12 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/21 23:48:08 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 int		ft_atoi(const char *nptr);
 char	*ft_itoa(int n);
-char	ft_toupper(int input);
+int		ft_toupper(int input);
 int		ft_tolower(int input);
 char	**ft_split(char const *s, char c);
 char	*ft_strjoin(char const *s1, char const *s2);
