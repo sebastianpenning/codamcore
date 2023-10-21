@@ -6,21 +6,21 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/16 20:07:54 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/20 22:49:47 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/21 14:36:36 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h" 
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
-    if (c > 31 && c < 127)
-    {
-        return(1);
-    }
-    else
-    {
-        return(0);
-    }
-    return(0);
+	if (c > 31 && c < 127)
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
+	return (0);
 }
