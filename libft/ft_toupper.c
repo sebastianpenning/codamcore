@@ -6,22 +6,21 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/04 14:34:13 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/16 20:28:19 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/21 20:55:46 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char ft_toupper(int c)
+char	ft_toupper(int c)
 {
-	if (c > 96 && c <123)
+	if (c > 96 && c < 123)
 	{
 		c = c - 32;
-		return(c);
+		return (c);
 	}
 	else
 	{
-		return(c);
+		return (c);
 	}
 }
-
