@@ -6,7 +6,7 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/04 14:00:52 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/16 20:21:10 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/21 14:22:50 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ int	ft_isalnum(int c)
 	}
 	else
 	{
-	return (0);
+		return (0);
 	}
 }
-
