@@ -6,14 +6,16 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/08 12:50:37 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/21 18:20:43 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/21 18:24:42 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 // added % 256 to make sure a character in ascii
-// is checked
+// is checked. Also added condition that if c == '\0'
+// then the the function returns pointer to the terminator
+// as described in the man.
 
 char	*ft_strchr(const char *s, int c)
 {
