@@ -6,7 +6,7 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/08 12:50:37 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/17 20:58:08 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/21 18:20:43 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,30 +15,29 @@
 // added % 256 to make sure a character in ascii
 // is checked
 
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-	int index;
-	char *s_cptr;
-	char *return_cptr;
+	int		index;
+	char	*s_cptr;
+	char	*return_cptr;
 
 	index = 0;
-	s_cptr = (char*)s;
+	s_cptr = (char *)s;
 	c = c % 256;
-
 	while (s_cptr[index] != '\0')
 	{
 		if (s_cptr[index] == c)
 		{
 			return_cptr = &s_cptr[index];
-			return(return_cptr);
+			return (return_cptr);
 		}
 		index++;
 	}
 	if (s_cptr[index] == '\0' && c == '\0')
 	{
 		return_cptr = &s_cptr[index];
-		return(return_cptr);
+		return (return_cptr);
 	}
 	return_cptr = NULL;
-	return(return_cptr);
+	return (return_cptr);
 }
