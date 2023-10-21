@@ -6,31 +6,50 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/06 22:35:47 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/17 20:24:02 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/21 18:07:21 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
+// In this function we want to move n bytes to dest from src.
+// We want to watch out what the we do not remove the original
+// source bytes when the src and dest are very close to each 
+// other in memory. That's why we check dest_cptr < src_cptr,
+// because if the dest is before src, you can copy to source 
+// before it is copied over. If the dest is larger you coud 
+// potentially copy over your source. 
+
 #include "libft.h"
 
-void *ft_memmove(void *dest, const void *src, size_t n)
+static char	*reverse_move(char	*dest_cptr, char const	*src_cptr, size_t n)
 {
-	const char *src_cptr;
-	char temp[n];
-	char *dest_cptr;
+	while (n > 0)
+	{
+		dest_cptr[n - 1] = src_cptr[n - 1];
+		n--;
+	}
+	return (dest_cptr);
+}
+
+void	*ft_memmove(void *dest, const void *src, size_t n)
+{
+	size_t		index;
+	const char	*src_cptr;
+	char		*dest_cptr;
+
 	dest_cptr = (char *)dest;
 	src_cptr = (char *)src;
-	long unsigned int index;
 	index = 0;
-	while (index < n)
+	if (dest_cptr < src_cptr)
 	{
-		temp[index] = src_cptr[index];
-		index++;	
+		while (index < n)
+		{
+			dest_cptr[index] = src_cptr[index];
+			index++;
+		}
 	}
-	index =0;
-	while (index < n)
+	else
 	{
-		dest_cptr[index] = temp[index];	
-		index++;
+		return (reverse_move(dest_cptr, src_cptr, n));
 	}
-	return(dest_cptr);
+	return (dest_cptr);
 }
