@@ -6,19 +6,21 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/12 13:31:02 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/20 22:48:42 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/21 22:42:08 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-// #include <string.h>
-// #include <stdio.h>
-// #include "ft_strlcpy.c"
-// #include "ft_strlen.c"
 
-static int free_all(char **allocation_array, size_t alc_index)
+// this functions frees all the already allocated indexs of the arrays
+// if one of the allocations fails, so we don't have any lingering memory
+// left. It starts from the 0 index until all the index that have been 
+// allocated are freed. 
+
+static int	free_all(char **allocation_array, size_t alc_index)
 {
-	size_t index;
+	size_t	index;
+
 	index = 0;
 	while (index <= alc_index)
 	{
@@ -28,143 +30,108 @@ static int free_all(char **allocation_array, size_t alc_index)
 	}
 	free(allocation_array);
 	allocation_array = 0;
-	return(0);
+	return (0);
 }
+// this function detects a word by checking if the current index 
+// is the delimiter or if the string has ended. In both cases it will 
+// return the index to which it has incremented and the other functions
+// in create splits deal with the rest. 
 
-static int store_substring(char **allocation_array, char const *string, size_t end_index, size_t alc_index)
+static size_t	get_token(char const *strin, char charact, size_t start_index)
 {
-	char* string_cptr;
-	string_cptr = (char*)malloc(sizeof(char) * (end_index + 1));
+	size_t	end_index;
 
-	if(string_cptr == NULL)
-	{
-		return(free_all(allocation_array, alc_index));
-	}
-
-	ft_strlcpy(string_cptr, string, end_index + 1);
-	allocation_array[alc_index] = string_cptr;
-	// printf("Current string is %s at %zu\n", allocation_array[alc_index], alc_index);
-	return(1);
-}
-
-static size_t get_token(char const *strin, char charact, size_t start_index)
-{
-	size_t end_index;
-	
 	end_index = start_index;
-
 	while (strin[end_index] != charact && strin[end_index] != '\0')
 	{
 		end_index++;
 	}
-	return(end_index);
+	return (end_index);
 }
+// In this function we allocate the words to the appropriate index in the
+// first dimension of the 2d array. We do this until all words are allocated
+// we get the words by going through the whole string, and checking per 
+// character if we have a word. This happends in the get token function
+// This function returns the end index of where a words ends. If a word is 
+// found then the end > start and we can store the word with ft_substring.
+// If this fails then we free everything with free_all, otherwise we try to
+// find the next word, or if we reached the end of the word we return the 
+// array
 
-static char ** create_splits(char **alloc_arr, char const *stri, char chara, size_t splits)
+static char	**create_splits(char **arr, char const *s, char ch, size_t spl)
 {
-	size_t start_index;
-	size_t end_index;
-	size_t alloc_index;
-	start_index = 0;
-	alloc_index = 0; 
-	end_index = 0;
+	size_t	start;
+	size_t	end;
+	size_t	arr_index;
 
-	while (alloc_index < splits)
+	start = 0;
+	arr_index = 0;
+	end = 0;
+	while (arr_index < spl)
 	{
-		end_index = start_index; 
-		end_index = get_token(stri, chara, start_index);
-		if (end_index > start_index)
+		end = get_token(s, ch, start);
+		if (end > start)
 		{
-			if(store_substring(alloc_arr,stri+start_index, (end_index - start_index), alloc_index) == 1)
+			arr[arr_index] = ft_substr(s, start, end - start);
+			if (arr[arr_index] == NULL)
 			{
-				alloc_index++;
+				free_all(arr, arr_index);
+				return (NULL);
 			}
-			else
-			{
-				return(NULL);
-			}
+			arr_index++;
 		}
-		if (!stri[end_index])
-			return alloc_arr;
-		start_index = end_index + 1;
+		if (!s[end])
+			return (arr);
+		start = end + 1;
 	}
-	return(alloc_arr);
+	return (arr);
 }
 
-// static size_t sumsplit(char const *str, char ch)
-// {
-// 	size_t sum;
-// 	char * s_cptr;
-// 	char * next_cptr;
-// 	size_t index; 
-// 	s_cptr = (char*)str;
-// 	next_cptr = s_cptr + 1;
-
-// 	index = 0;
-// 	sum = 0;
-
-// 	if (s_cptr[index] != ch)
-// 		sum++;
-// 	while (s_cptr[index] != '\0')
-// 	{
-// 		if (s_cptr[index] == ch && next_cptr[index] != ch && next_cptr[index] != '\0')
-// 		{
-// 			sum++;
-// 		}
-// 		index++;
-// 	}
-// 	if (sum == 1)
-// 		sum--;
-// 	return(sum);
-// }
-
-size_t count_words(const char* str, char delim) {
-	size_t index;
-	size_t count;
+// first we skip over all the delimiters, afterwards if the string
+// is not done we add a count, then we skip over all the string that 
+// is not a delimiter, until we hit either the end or we hit a 
+// delimiter, then once we hit another charachter that is not delimiter
+// and also not the end of the string we increment the count. This repeats
+// until we find all the words or the end of the string.
+size_t	count_words(const char *str, char delim)
+{
+	size_t	index;
+	size_t	count;
 
 	index = 0;
 	count = 0;
 	while (str[index] != '\0' && str[index] == delim)
 		index++;
-	while (str[index] != '\0') {
+	while (str[index] != '\0')
+	{
 		count++;
 		while (str[index] != '\0' && str[index] != delim)
 			index++;
 		if (str[index] == '\0')
-			break;
+			break ;
 		while (str[index] != '\0' && str[index] == delim)
 			index++;
 	}
-	return count;
+	return (count);
 }
+// this the main function that first counts the amount of words we have
+// then we allocate the amount of words + 1 for the null pointer to end the
+// first dimension of the array. If this allocations falls we return null
+// Then we go to create the splits, if this falls, we then return null
+// in the end we null terminate the array and then return the 2d array
 
-char ** ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-	size_t split_sum;
-	char ** return_arr;
-	
+	size_t	split_sum;
+	char	**return_arr;
+
 	split_sum = count_words(s, c);
-	// printf("%zu\n", split_sum);
-	return_arr = (char**)malloc(sizeof(char*) * (split_sum + 1));
-	// printf("%zu\n", split_sum);
-	// printf("%zu\n", sizeof(char*) * split_sum);
+	return_arr = (char **)malloc(sizeof(char *) * (split_sum + 1));
+	if (return_arr == NULL)
+		return (NULL);
 	return_arr = create_splits(return_arr, s, c, (split_sum));
 	if (return_arr == NULL)
-		return(NULL);
+		return (NULL);
 	return_arr[split_sum] = NULL;
-	return(return_arr);
+	return (return_arr);
 }
-
-// int main ()
-// {
-// 	char * * tab = ft_split("  tripouille  42  ", ' ');
-// 	printf("%d\n", !strcmp(tab[0], "tripouille"));
-// 	printf("%s\n", tab[0]);
-// 	// printf("%s\n", tab[1]);
-// 	printf("%s\n", tab[2]);
-// 	if (tab[2] == NULL)
-// 	{
-// 		printf("%s\n", "is null");
-// 	}
-
-// }
