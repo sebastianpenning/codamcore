@@ -6,14 +6,14 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/15 17:23:57 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/21 14:47:11 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/21 14:48:09 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 // this functions first makes a long integer to handle 
 // int edge cases, then it counts the amount of memory it 
 // needs to allocate with size_counter. if number is negative 
-// then it will irst put a '-'. afterwards it will go into the 
+// then it will first put a '-'. afterwards it will go into the 
 // recursive putnmbr function. it will end the function by null
 // terminating the result. it takes into account the 0 edge case 
 // by putting 0 + 48 and null terminating afterwards.
