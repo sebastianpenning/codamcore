@@ -6,7 +6,7 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/08 18:06:38 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/22 12:31:30 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/22 12:34:56 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,19 +23,19 @@
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t	index;
-	char	*s_vptr;
+	char	*s_cptr;
 
-	s_vptr = (char *)s;
+	s_cptr = (char *)s;
 	index = 0;
 	while (index < n)
 	{
-		if (*(s_vptr + index) == ((unsigned char)c % 256))
+		if ((unsigned char)s_cptr[index] == ((unsigned char)c))
 		{
-			s_vptr = s_vptr + index;
-			return (s_vptr);
+			s_cptr = s_cptr + index;
+			return (s_cptr);
 		}
 		index++;
 	}
-	s_vptr = NULL;
-	return (s_vptr);
+	s_cptr = NULL;
+	return (s_cptr);
 }
