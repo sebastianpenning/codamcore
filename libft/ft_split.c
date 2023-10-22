@@ -6,7 +6,7 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/12 13:31:02 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/21 22:42:08 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/22 15:55:11 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,7 @@ static char	**create_splits(char **arr, char const *s, char ch, size_t spl)
 // delimiter, then once we hit another charachter that is not delimiter
 // and also not the end of the string we increment the count. This repeats
 // until we find all the words or the end of the string.
-size_t	count_words(const char *str, char delim)
+static size_t	count_words(const char *str, char delim)
 {
 	size_t	index;
 	size_t	count;
