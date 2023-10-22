@@ -6,7 +6,7 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/08 18:06:38 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/22 12:34:56 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/22 12:37:15 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 // this function takes parameter s and we try to find c witin
 // n bytes. We first convert it to char pointer to be able to 
 // compare byte by byte.
-// % 256 added because if a int above 256 is given it will 
+// unsigned char is added to make sure only characters are compared. 
 // go off the ascii table. Otherwise it can never find the 
 // char it is looking for in the memory. If chr is not found in
 // n memory bytes then the pointer is made null and returned.
