@@ -6,14 +6,15 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/08 12:50:37 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/22 16:03:34 by spenning      ########   odam.nl         */
+/*   Updated: 2023/10/22 16:05:34 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// added % 256 to make sure a character in ascii
-// is checked. Also added condition that if c == '\0'
+// made all characters to unsigned char to make sure 
+// only characters are checked. 
+// Also added condition that if c == '\0'
 // then the the function returns pointer to the terminator
 // as described in the man.
 
