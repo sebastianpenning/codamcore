@@ -18,7 +18,7 @@
 
 static char	*skipwhitespaces(char *c_ptr)
 {
-	while ((*c_ptr > 8 && *c_ptr < 14) || *c_ptr == 0 || *c_ptr == 32)
+	while ((*c_ptr > 8 && *c_ptr < 14) || *c_ptr == 32)
 	{
 		c_ptr++;
 	}
