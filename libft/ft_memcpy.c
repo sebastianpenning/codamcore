@@ -11,6 +11,8 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+// #include <stdio.h>
+// #include <string.h>
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
@@ -21,6 +23,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	index = 0;
 	src_cptr = (char *)src;
 	dest_cptr = (char *)dest;
+	if (src_cptr == 0 && dest_cptr == 0)
+		return (NULL);
 	while (index < n)
 	{
 		dest_cptr[index] = src_cptr[index];
@@ -28,3 +32,12 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest_cptr);
 }
+
+
+// int main()
+// {
+// 	// printf("my func:%p", ft_memcpy(((void*)0), ((void*)0), 3));
+// 	char dest[10] = "test";
+// 	printf("org func:%p", ft_memcpy(((void*)0), ((void*)0), 3));
+// 	return(0);
+// }
