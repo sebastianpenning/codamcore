@@ -1,5 +1,7 @@
 #include <stdarg.h>
 #include <stdio.h>
+#include <unistd.h>
+
 
 // check [flags] [width] and [. precision]
 
@@ -28,10 +30,23 @@ int check_precision (const char precs)
 	return (0);
 }
 
-int check_format (const char specifier)
+
+
+int ft_printchar(va_list args)
+{
+	int c;
+	c = va_arg(args, int);
+	c = (char)c;
+	write(1, &c, 1);
+	return (0);
+}
+
+
+
+int check_datatype (const char specifier, va_list args)
 {
 	if(specifier == 'c')
-		printf("c");
+		ft_printchar(args);
 	if(specifier == 's')
 		printf("s");
 	if(specifier == 'p')
@@ -51,23 +66,34 @@ int check_format (const char specifier)
 	return (0);
 }
 
-int ft_printf(const char * args, ...)
+int ft_printf(const char * str, ...)
 {
-	while (*args)
+	int index;
+	va_list args;
+
+	index = 0;
+	va_start(args, str);
+	while (*str)
 	{
-		if (*args == '%')
-			printf("check if is format string\n");
-			check_flags();
-			check_width();
-			check_precision();
-			check_datatype(args[1]);
-		args++;
+		if (*str == '%')
+		{
+			//printf("check if is format string\n");
+			// check_flags();
+			// check_width();
+			// check_precision();
+			check_datatype(str[1], args);
+			str += 2;
+		}
+		write(1, str, 1);
+		str++;
 	}
+	va_end(args);
 	return(0);
 }
 
 int main ()
 {
-	ft_printf("aaaa%da");
+	char test = 'L';
+	ft_printf("Wow this is the letter: %c and again %c", test, test);
 	return (0);
 }
