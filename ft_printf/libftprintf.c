@@ -41,16 +41,35 @@ int ft_printchar(va_list args)
 	return (0);
 }
 
-
+int ft_printstr(va_list args)
+{
+	char *str;
+	str = va_arg(args, char *);
+	while (*str)
+	{
+		write(1, str, 1);
+		str++;
+	}
+	return (0);
+}
+int ft_printptr(va_list args)
+{
+	void *ptr;
+	void ** test;
+	ptr = va_arg(args, void*);
+	test = &ptr;
+	write(1, test, 5);
+	return (0);
+}
 
 int check_datatype (const char specifier, va_list args)
 {
 	if(specifier == 'c')
 		ft_printchar(args);
 	if(specifier == 's')
-		printf("s");
+		ft_printstr(args);
 	if(specifier == 'p')
-		printf("p");
+		ft_printptr(args);
 	if(specifier == 'd')
 		printf("d");
 	if(specifier == 'i')
@@ -93,7 +112,11 @@ int ft_printf(const char * str, ...)
 
 int main ()
 {
-	char test = 'L';
-	ft_printf("Wow this is the letter: %c and again %c", test, test);
+	char* test = "nice";
+	printf("test address %p\n", test);
+	int adr = &test;
+	printf("%d\n", test);
+	printf("%x\n", adr);
+	// ft_printf("hello %p", test);
 	return (0);
 }
