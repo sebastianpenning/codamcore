@@ -16,6 +16,8 @@ int check_datatype (const char specifier, va_list args)
 		ft_printint(args);
 	if(specifier == 'u')
 		ft_printuint(args);
+	if(specifier == '%')
+		ft_printamp();
 	return 0;
 }
 
@@ -47,6 +49,6 @@ int main ()
 	int test;
 	test = -5436546;
 
-	ft_printf("hello %u \n", test);
+	ft_printf("hello %%\n");
 	return (0);
 }

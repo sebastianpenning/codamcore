@@ -6,7 +6,7 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/21 23:03:23 by spenning      #+#    #+#                 */
-/*   Updated: 2023/11/23 15:58:06 by spenning      ########   odam.nl         */
+/*   Updated: 2023/11/23 16:50:50 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,6 @@ int     ft_printchar(va_list args);
 int     ft_printstr(va_list args);
 int     ft_printint(va_list args);
 int     ft_printuint(va_list args);
+int     ft_printamp();
 
 #endif
