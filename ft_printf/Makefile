@@ -2,6 +2,7 @@ LIB_DIR := libft
 
 all:
 	@$(MAKE) -C $(LIB_DIR)
+	cp libft/libft.a libftprintf.a
 	@$(MAKE) -f ft_printf.mk
 
 clean:
