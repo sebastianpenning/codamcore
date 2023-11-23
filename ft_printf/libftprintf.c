@@ -14,6 +14,8 @@ int check_datatype (const char specifier, va_list args)
 		ft_printint(args);
 	if(specifier == 'i')
 		ft_printint(args);
+	if(specifier == 'u')
+		ft_printuint(args);
 	return 0;
 }
 
@@ -43,8 +45,8 @@ int ft_printf(const char *format, ...)
 int main ()
 {
 	int test;
-	test = 5436546;
+	test = -5436546;
 
-	ft_printf("hello %d \n", test);
+	ft_printf("hello %u \n", test);
 	return (0);
 }

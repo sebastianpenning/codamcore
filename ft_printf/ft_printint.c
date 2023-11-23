@@ -7,4 +7,3 @@ int ft_printint(va_list args)
 	ft_putnbr_fd(arg, 1);
 	return (0);
 }
-
