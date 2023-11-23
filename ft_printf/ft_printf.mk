@@ -13,7 +13,8 @@ CFLAGS = -Wall -Werror -Wextra
 # This is the $(SRCS) Macro that indicates 
 # which files we want to compile in this makefile
 
-SRCS = libftprintf.c ft_printchar.c ft_printstr.c ft_printdec.c
+SRCS = libftprintf.c ft_printchar.c ft_printstr.c \
+	ft_printint.c ft_printuint.c
 
 # These objects are dependent on the sources macro
 # This syntax means that it replaces all the .c to .o
