@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   libft.h                                            :+:    :+:            */
+/*   libftprintf.h                                      :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/21 23:03:23 by spenning      #+#    #+#                 */
-/*   Updated: 2023/10/22 14:02:53 by spenning      ########   odam.nl         */
+/*   Updated: 2023/11/23 13:21:14 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,11 @@
 
 #include <stdarg.h>
 #include <unistd.h>
-
+#include "libft/libft.h"
 
 int     ft_printf(const char *format, ...);
 int     ft_printchar(va_list args);
 int     ft_printstr(va_list args);
+int     ft_printdec(va_list args);
 
 #endif

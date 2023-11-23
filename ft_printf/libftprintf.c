@@ -1,41 +1,8 @@
 #include "libftprintf.h"
+#include <stdio.h>
 
 // check [flags] [width] and [. precision]
 
-// int check_flags (const char flag)
-// {
-// 	if(flag == '-')
-// 		printf("-");
-// 	if(flag == '+')
-// 		printf("+");
-// 	if(flag == ' ')
-// 		printf(" ");
-// 	if(flag == '#')
-// 		printf("#");
-// 	if(flag == '0')
-// 		printf("0");	
-// 	return (0);
-// }
-
-// int check_width (const char width)
-// {
-// 	return (0);
-// }
-
-// int check_precision (const char precs)
-// {
-// 	return (0);
-// }
-
-// int ft_printptr(va_list args)
-// {
-// 	void *ptr;
-// 	void ** test;
-// 	ptr = va_arg(args, void*);
-// 	test = &ptr;
-// 	write(1, test, 5);
-// 	return (0);
-// }
 
 int check_datatype (const char specifier, va_list args)
 {
@@ -43,6 +10,8 @@ int check_datatype (const char specifier, va_list args)
 		ft_printchar(args);
 	if(specifier == 's')
 		ft_printstr(args);
+	if(specifier == 'd')
+		ft_printdec(args);
 	return 0;
 }
 
@@ -71,7 +40,9 @@ int ft_printf(const char *format, ...)
 
 int main ()
 {
-	char* test = "world";
-	ft_printf("hello %s\n", test);
+	int test;
+	test = 5436546;
+
+	ft_printf("hello %d \n", test);
 	return (0);
 }
