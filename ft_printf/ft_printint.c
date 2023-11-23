@@ -2,9 +2,9 @@
 
 int ft_printint(va_list args)
 {
-	int dec;
-	dec = va_arg(args, int);
-	ft_putnbr_fd(dec, 1);
+	int arg;
+	arg = va_arg(args, int);
+	ft_putnbr_fd(arg, 1);
 	return (0);
 }
 
