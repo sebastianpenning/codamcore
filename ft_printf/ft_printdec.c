@@ -1,6 +1,6 @@
 #include "libftprintf.h"
 
-int ft_printdec(va_list args)
+int ft_printint(va_list args)
 {
 	int dec;
 	dec = va_arg(args, int);

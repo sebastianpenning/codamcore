@@ -11,7 +11,9 @@ int check_datatype (const char specifier, va_list args)
 	if(specifier == 's')
 		ft_printstr(args);
 	if(specifier == 'd')
-		ft_printdec(args);
+		ft_printint(args);
+	if(specifier == 'i')
+		ft_printint(args);
 	return 0;
 }
 
