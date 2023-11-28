@@ -18,6 +18,8 @@ int check_datatype (const char specifier, va_list args)
 		ft_printuint(args);
 	if(specifier == '%')
 		ft_printamp();
+	if(specifier == 'x')
+		ft_printhexlow(args);
 	return 0;
 }
 
@@ -47,8 +49,8 @@ int ft_printf(const char *format, ...)
 int main ()
 {
 	int test;
-	test = -5436546;
+	test = 534667;
 
-	ft_printf("hello %%\n");
+	ft_printf("hello %x\n", test);
 	return (0);
 }
