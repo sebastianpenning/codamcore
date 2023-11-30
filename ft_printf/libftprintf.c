@@ -49,7 +49,7 @@ int ft_printf(const char *format, ...)
 int main ()
 {
 	int test;
-	test = 534667;
+	test = 450;
 
 	ft_printf("hello %x\n", test);
 	return (0);
