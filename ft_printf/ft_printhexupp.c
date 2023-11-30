@@ -1,4 +1,5 @@
-#include "libftprintf.h"
+#include "ft_printf.h"
+#include "stdio.h"
 
 int	ft_printhexupp(va_list args)
 {
@@ -7,6 +8,7 @@ int	ft_printhexupp(va_list args)
 	char * hex;
 	
 	arg = va_arg(args, long unsigned int);
+	// printf("arg return value %lu\n", arg);
 	hex = ft_hexconvert(arg);
 	index = ft_strlen(hex); 
 	while (index >= 0)

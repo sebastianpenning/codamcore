@@ -1,8 +1,5 @@
-#include "libftprintf.h"
-#include <stdio.h>
-
-// check [flags] [width] and [. precision]
-
+#include "ft_printf.h"
+#include "stdio.h"
 
 static int check_datatype (const char specifier, va_list args)
 {
@@ -36,28 +33,34 @@ int ft_printf(const char *format, ...)
 	{
 		if (*format == '%')
 		{
-			//printf("check if is format string\n");
-			// check_flags();
-			// check_width();
-			// check_precision();
 			check_datatype(format[1], args);
 			format += 2;
 		}
-		write(1, format, 1);
-		format++;
+		else
+		{
+			write(1, format, 1);
+			format++;
+		}
 	}
 	va_end(args);
 	return(0);
 }
 
-int main ()
-{
-	char* test2;
-	test2 = "dewuhfi";
+// int main ()
+// {
+// 	printf("\n");
+// 	printf("My printf: \n");
+// 	ft_printf("%%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% 	%%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %c%%", 
+// 				'A', "42", 42, 42 ,42 , 42, 42, 'B', "-42", -42, -42 ,-42 ,-42, 42,   'C', "0", 0, 0 ,0 ,0, 42, 0);
+// 	printf("\n");
+// 	printf("org printf: \n");
+// 	   printf("%%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %c%%", 'A', "42", 42, 42 ,42 , 42, 42, 'B', "-42", -42, -42 ,-42 ,-42, 42, 'C', "0", 0, 0 ,0 ,0, 42, 0);
+// 	// ft_printf("%%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% ", 'A', "42", 42, 42 ,42 , 42, 42);
+// 	printf("\n");
+// 	// ft_printf("%%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%%", 'A', "42", 42, 42 ,42 , 42, 42, 'B', "-42", -42, -42 ,-42 ,-42, 42);
+// 	// printf("\n-------------------\n");
+// 	// printf("%%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%%", 'A', "42", 42, 42 ,42 , 42, 42);
+// 	// printf("\n");
+// 	// printf("%%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%%", 'A', "42", 42, 42 ,42 , 42, 42, 'B', "-42", -42, -42 ,-42 ,-42, 42);
 
-
-	ft_printf("hello %p\n", test2);
-	printf("hello %p\n", test2);
-
-	return (0);
-}
+// }

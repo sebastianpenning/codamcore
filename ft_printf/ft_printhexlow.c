@@ -1,12 +1,12 @@
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_printhexlow(va_list args)
 {
-	long unsigned int arg;
+	unsigned int arg;
 	int index;
 	char * hex;
 	
-	arg = va_arg(args, long unsigned int);
+	arg = va_arg(args, unsigned int);
 	hex = ft_hexconvert(arg);
 	index = ft_strlen(hex);
 	while (index >= 0)

@@ -1,6 +1,4 @@
-#include "libftprintf.h"
-#include "stdio.h"
-#include <stdint.h>
+#include "ft_printf.h"
 
 int	ft_printptr(va_list args)
 {
