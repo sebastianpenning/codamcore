@@ -2,12 +2,13 @@
 #include <stdio.h>
 #include <limits.h>
 
-static char remainderconvert(int arg)
+static char remainderconvert(long unsigned int arg)
 {
-	int rem_int;
+	long unsigned int rem_int;
 	char rem_char;
 
 	rem_int = arg % 16;
+	// printf("%lu\n", rem_int);
 	if (rem_int > 9)
 	{
 		rem_char = rem_int + 55;
@@ -22,14 +23,14 @@ static char remainderconvert(int arg)
 
 
 
-char* ft_hexconvert(int arg)
+char* ft_hexconvert(long unsigned int arg)
 {
-	int quotient;
+	long unsigned int quotient;
 	int index;
 	char remainder;
 	char *hexstr;
 
-	hexstr = malloc(sizeof(char)*26);
+	hexstr = malloc(sizeof(char)*60);
 	if(hexstr == NULL)
 		return (NULL);
 	index = 0;

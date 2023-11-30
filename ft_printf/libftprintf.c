@@ -22,6 +22,8 @@ static int check_datatype (const char specifier, va_list args)
 		ft_printhexlow(args);
 	if(specifier == 'X')
 		ft_printhexupp(args);
+	if(specifier == 'p')
+		ft_printptr(args);
 	return 0;
 }
 
@@ -50,11 +52,12 @@ int ft_printf(const char *format, ...)
 
 int main ()
 {
-	int test;
-	test = 450;
+	char* test2;
+	test2 = "dewuhfi";
 
-	ft_printf("hello %x\n", test);
-	printf("hello %x\n", test);
+
+	ft_printf("hello %p\n", test2);
+	printf("hello %p\n", test2);
 
 	return (0);
 }
