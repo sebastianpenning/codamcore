@@ -6,7 +6,7 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/21 23:03:23 by spenning      #+#    #+#                 */
-/*   Updated: 2023/11/28 11:56:33 by spenning      ########   odam.nl         */
+/*   Updated: 2023/11/30 15:41:14 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,6 @@ int     ft_printuint(va_list args);
 int     ft_printamp();
 int		ft_printhexlow(va_list args);
 char*	ft_hexconvert(int arg);
+int		ft_printhexupp(va_list args);
 
 #endif

@@ -4,7 +4,7 @@
 // check [flags] [width] and [. precision]
 
 
-int check_datatype (const char specifier, va_list args)
+static int check_datatype (const char specifier, va_list args)
 {
 	if(specifier == 'c')
 		ft_printchar(args);
@@ -20,6 +20,8 @@ int check_datatype (const char specifier, va_list args)
 		ft_printamp();
 	if(specifier == 'x')
 		ft_printhexlow(args);
+	if(specifier == 'X')
+		ft_printhexupp(args);
 	return 0;
 }
 
@@ -52,5 +54,7 @@ int main ()
 	test = 450;
 
 	ft_printf("hello %x\n", test);
+	printf("hello %x\n", test);
+
 	return (0);
 }

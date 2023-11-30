@@ -15,7 +15,7 @@ CFLAGS = -Wall -Werror -Wextra
 
 SRCS = libftprintf.c ft_printchar.c ft_printstr.c \
 	ft_printint.c ft_printuint.c ft_printamp.c ft_printhexlow.c \
-	ft_hexconvert.c
+	ft_hexconvert.c ft_printhexupp.c 
 
 # These objects are dependent on the sources macro
 # This syntax means that it replaces all the .c to .o
