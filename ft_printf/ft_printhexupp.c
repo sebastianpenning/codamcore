@@ -3,20 +3,21 @@
 
 int	ft_printhexupp(va_list args)
 {
+	int rtr;
 	long unsigned int arg;
 	int index;
 	char * hex;
 	
+	rtr = 0;
 	arg = va_arg(args, long unsigned int);
-	// printf("arg return value %lu\n", arg);
 	hex = ft_hexconvert(arg);
-	index = ft_strlen(hex); 
+	index = ft_strlen(hex) -1; 
 	while (index >= 0)
 	{
-		ft_putchar_fd(ft_toupper(hex[index]), 1);
+		rtr += ft_putchar_fd(ft_toupper(hex[index]), 1);
 		index--;
 	}
 	free(hex);	
-	return (0);
+	return (rtr);
 }
 
