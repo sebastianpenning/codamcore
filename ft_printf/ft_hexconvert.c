@@ -34,7 +34,7 @@ char* ft_hexconvert(unsigned int arg)
 		return (NULL);
 	index = 0;
 	if(arg == 0)
-		write(1, "0", 1);
+		hexstr[index++] = '0';
 	while(arg > 0)
 	{
 		quotient = arg / 16;

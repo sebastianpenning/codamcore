@@ -60,13 +60,13 @@ int ft_printf(const char *format, ...)
 // 	printf("My printf: \n");
 // 	// rtr = ft_printf("%%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% 	%%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %c%%", 
 // 	// 			'A', "42", 42, 42 ,42 , 42, 42, 'B', "-42", -42, -42 ,-42 ,-42, 42,   'C', "0", 0, 0 ,0 ,0, 42, 0);
-// 	rtr = ft_printf("lolol %d\n", 4435);
+// 	rtr = ft_printf("lolol %x\n", 0);
 // 	printf("num: %d\n", rtr);
 
 // 	printf("\n");
 // 	printf("org printf: \n");
 // 	// rtr = printf("%%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %c%%", 'A', "42", 42, 42 ,42 , 42, 42, 'B', "-42", -42, -42 ,-42 ,-42, 42, 'C', "0", 0, 0 ,0 ,0, 42, 0);
-// 	rtr = printf("lolol %d\n", 4435);
+// 	rtr = printf("lolol %x\n", 0);
 // 	printf("num: %d\n", rtr);
 // 	// ft_printf("%%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% ", 'A', "42", 42, 42 ,42 , 42, 42);
 // 	printf("\n");
