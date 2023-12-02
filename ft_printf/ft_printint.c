@@ -3,7 +3,10 @@
 int ft_printint(va_list args)
 {
 	int arg;
+	int rtr;
+
 	arg = va_arg(args, int);
-	ft_putnbr_fd(arg, 1);
-	return (0);
+	rtr = 0;
+	rtr = ft_putnbr_fd(arg, 1);
+	return (rtr);
 }

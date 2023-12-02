@@ -2,12 +2,20 @@
 
 int ft_printstr(va_list args)
 {
+	int rtr;
 	char *str;
+	
 	str = va_arg(args, char *);
-	while (*str)
+	rtr = 0;
+	if(str == NULL)
+		rtr = ft_putstr_fd("(null)", 1);
+	else
 	{
-		write(1, str, 1);
-		str++;
+		while (*str)
+		{
+			rtr += ft_putchar_fd(str[0], 1);
+			str++;
+		}
 	}
-	return (0);
+	return (rtr);
 }

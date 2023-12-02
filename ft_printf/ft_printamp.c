@@ -2,6 +2,9 @@
 
 int ft_printamp()
 {
-	ft_putchar_fd('%', 1);
-	return(0);
+	int rtr;
+
+	rtr = 0;
+	rtr += ft_putchar_fd('%', 1);
+	return(rtr);
 }
