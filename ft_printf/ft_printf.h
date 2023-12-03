@@ -6,7 +6,7 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/21 23:03:23 by spenning      #+#    #+#                 */
-/*   Updated: 2023/12/03 10:50:10 by spenning      ########   odam.nl         */
+/*   Updated: 2023/12/03 10:53:16 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,9 @@ int     ft_printstr(va_list args);
 int     ft_printint(va_list args);
 int     ft_printuint(va_list args);
 int     ft_printamp();
-int		ft_printhexlow(va_list args);
 int		ft_printhex(va_list args, char specifier);
 char*	ft_hexconvert(unsigned int arg);
 char*	ft_hexconvertptr(long unsigned int arg);
-int		ft_printhexupp(va_list args);
 int		ft_printptr(va_list args);
 
 #endif
