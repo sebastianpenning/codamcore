@@ -1,5 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   libftprintf.c                                      :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: spenning <spenning@student.42.fr>            +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2023/12/03 10:45:10 by spenning      #+#    #+#                 */
+/*   Updated: 2023/12/03 10:48:05 by spenning      ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
-#include "stdio.h"
 
 static int check_datatype (const char specifier, va_list args)
 {
@@ -18,10 +29,13 @@ static int check_datatype (const char specifier, va_list args)
 		rtr = ft_printuint(args);
 	if(specifier == '%')
 		rtr = ft_printamp();
-	if(specifier == 'x')
-		rtr = ft_printhexlow(args);
-	if(specifier == 'X')
-		rtr = ft_printhexupp(args);
+	if(specifier == 'x' || specifier == 'X')
+		rtr = ft_printhex(args, specifier);
+
+	// if(specifier == 'x')
+	// 	rtr = ft_printhexlow(args);
+	// if(specifier == 'X')
+	// 	rtr = ft_printhexupp(args);
 	if(specifier == 'p')
 		rtr = ft_printptr(args);
 	return (rtr);

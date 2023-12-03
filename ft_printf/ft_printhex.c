@@ -1,33 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_printstr.c                                      :+:    :+:            */
+/*   ft_printhex.c                                      :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/12/03 10:44:57 by spenning      #+#    #+#                 */
-/*   Updated: 2023/12/03 10:44:58 by spenning      ########   odam.nl         */
+/*   Created: 2023/12/03 10:49:25 by spenning      #+#    #+#                 */
+/*   Updated: 2023/12/03 10:49:40 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_printstr(va_list args)
+int	ft_printhex(va_list args, char specifier)
 {
 	int rtr;
-	char *str;
+	unsigned int arg;
+	int index;
+	char * hex;
 	
-	str = va_arg(args, char *);
 	rtr = 0;
-	if(str == NULL)
-		rtr = ft_putstr_fd("(null)", 1);
-	else
+	arg = va_arg(args, unsigned int);
+	hex = ft_hexconvert(arg);
+	index = ft_strlen(hex) -1;
+	while (index >= 0)
 	{
-		while (*str)
-		{
-			rtr += ft_putchar_fd(str[0], 1);
-			str++;
-		}
+		if (specifier == 'x')
+			rtr += ft_putchar_fd(ft_tolower(hex[index]), 1);
+		if (specifier == 'X')
+			rtr += ft_putchar_fd(ft_toupper(hex[index]), 1);
+		index--;
 	}
+	free(hex);	
 	return (rtr);
 }

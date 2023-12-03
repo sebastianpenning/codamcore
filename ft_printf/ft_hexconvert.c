@@ -1,5 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_hexconvert.c                                    :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: spenning <spenning@student.42.fr>            +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2023/12/03 10:43:41 by spenning      #+#    #+#                 */
+/*   Updated: 2023/12/03 10:43:46 by spenning      ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
-#include "stdio.h"
 
 static char remainderconvert(long int arg)
 {
