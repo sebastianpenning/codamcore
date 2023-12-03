@@ -6,11 +6,12 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/12/03 10:45:10 by spenning      #+#    #+#                 */
-/*   Updated: 2023/12/03 10:55:05 by spenning      ########   odam.nl         */
+/*   Updated: 2023/12/03 11:50:20 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <stdio.h>
 
 static int check_datatype (const char specifier, va_list args)
 {
@@ -59,31 +60,3 @@ int ft_printf(const char *format, ...)
 	va_end(args);
 	return(rtr);
 }
-
-// int main ()
-// {
-// 	int rtr;
-
-// 	rtr = 0;
-// 	// char test[10] = "lolol";
-// 	printf("\n");
-// 	printf("My printf: \n");
-// 	// rtr = ft_printf("%%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %c%%", 
-// 				// 'A', "42", 42, 42 ,42 , 42, 42, 'B', "-42", -42, -42 ,-42 ,-42, 42,   'C', "0", 0, 0 ,0 ,0, 42, 0);
-// 	rtr = ft_printf(" %p %p ", NULL, NULL);
-// 	printf("num: %d\n", rtr);
-
-// 	printf("\n");
-// 	printf("org printf: \n");
-// 	// rtr = printf("%%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %c%%", 'A', "42", 42, 42 ,42 , 42, 42, 'B', "-42", -42, -42 ,-42 ,-42, 42, 'C', "0", 0, 0 ,0 ,0, 42, 0);
-// 	rtr = printf(" %p %p ", NULL, NULL);
-// 	printf("num: %d\n", rtr);
-// 	// ft_printf("%%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% ", 'A', "42", 42, 42 ,42 , 42, 42);
-// 	printf("\n");
-// 	// ft_printf("%%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%%", 'A', "42", 42, 42 ,42 , 42, 42, 'B', "-42", -42, -42 ,-42 ,-42, 42);
-// 	// printf("\n-------------------\n");
-// 	// printf("%%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%%", 'A', "42", 42, 42 ,42 , 42, 42);
-// 	// printf("\n");
-// 	// printf("%%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%%", 'A', "42", 42, 42 ,42 , 42, 42, 'B', "-42", -42, -42 ,-42 ,-42, 42);
-
-// }

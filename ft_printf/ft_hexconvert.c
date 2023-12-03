@@ -6,54 +6,31 @@
 /*   By: spenning <spenning@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/12/03 10:43:41 by spenning      #+#    #+#                 */
-/*   Updated: 2023/12/03 10:43:46 by spenning      ########   odam.nl         */
+/*   Updated: 2023/12/03 11:49:05 by spenning      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static char remainderconvert(long int arg)
+int ft_hexconvert(unsigned int arg, char specifier)
 {
-	long int rem_int;
-	char rem_char;
+	int rtr;
+	int rem_int;
 
-	rem_int = arg % 16;
-	if (rem_int > 9)
+	rtr = 0;
+	rem_int = 0;
+	if(arg > 0)
 	{
-		rem_char = rem_int + 55;
+		rtr += ft_hexconvert(arg / 16, specifier);
+		rem_int = arg % 16;
+		if (rem_int > 9)
+			rem_int += 55;
+		else
+			rem_int += 48;
+		if(specifier == 'x')
+			rtr += ft_putchar_fd(ft_tolower(rem_int), 1);
+		if(specifier == 'X')
+			rtr += ft_putchar_fd(ft_toupper(rem_int), 1);
 	}
-	else
-	{
-		rem_char = rem_int + 48;
-	}
-	return(rem_char);
+	return(rtr);
 }
-
-
-
-
-char* ft_hexconvert(unsigned int arg)
-{
-	long int quotient;
-	int index;
-	char remainder;
-	char *hexstr;
-
-	hexstr = malloc(sizeof(char)*60);
-	if(hexstr == NULL)
-		return (NULL);
-	index = 0;
-	if(arg == 0)
-		hexstr[index++] = '0';
-	while(arg > 0)
-	{
-		quotient = arg / 16;
-		remainder = remainderconvert(arg);
-		hexstr[index] = remainder;
-		arg = quotient;
-		index++;
-	}
-	hexstr[index] = '\0';
-	return(hexstr);
-}
-
