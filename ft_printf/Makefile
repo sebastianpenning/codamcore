@@ -40,11 +40,13 @@ all: $(NAME)
 # files if they did not exist yet, and reindex(s) the archive
 # to make it easier to locate files
 
-$(NAME): $(OBJS)
-	@$(MAKE) -C $(LIB_DIR)
-	@$(MAKE) -C $(LIB_DIR) bonus 
-	cp	libft/libft.a libftprintf.a
+$(NAME): $(LIB_DIR)/libft.a $(OBJS)
 	ar rcs $(NAME) $(OBJS)
+
+$(LIB_DIR)/libft.a: 
+	@$(MAKE) -C $(LIB_DIR) all bonus
+	cp libft/libft.a libftprintf.a
+	
 
 # all command is dependent on .o files existing, so this rule
 # will make sure to (re)create them if neccessary. This rule is a 
@@ -62,8 +64,8 @@ $(NAME): $(OBJS)
 # $(OBJS) macro.
 
 clean:
-	rm -f $(OBJS)
 	@$(MAKE) -C $(LIB_DIR) clean
+	rm -f $(OBJS)
 
 # This rule has a target which is clean
 # This will make sure clean is up to date and 
@@ -71,8 +73,8 @@ clean:
 # $(NAME) macro
 
 fclean: clean
-	rm -f $(NAME)
 	@$(MAKE) -C $(LIB_DIR) fclean
+	rm -f $(NAME)
 
 # This rule has a target which is fclean
 # This will make sure fclean is up to date and 
