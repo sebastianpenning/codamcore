@@ -1,15 +1,21 @@
 #include "ft_printf.h"
+#include "stdio.h"
 
 int	ft_printptr(va_list args)
 {
 	int index;
 	int rtr;
-	unsigned long int arg;
+	long unsigned arg;
 	char * hex;
 
-	arg = va_arg(args, unsigned long int);
-	hex = ft_hexconvert(arg);
-	index = ft_strlen(hex);
+	arg = va_arg(args, long unsigned int);
+	if(arg == 0)
+	{
+		rtr = ft_putstr_fd("(nil)", 1);
+		return (rtr);
+	}
+	hex = ft_hexconvertptr(arg);
+	index = ft_strlen(hex) - 1;
 	rtr = 0;
 	rtr += ft_putchar_fd('0', 1);
 	rtr += ft_putchar_fd('x', 1);

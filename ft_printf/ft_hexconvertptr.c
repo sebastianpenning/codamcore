@@ -1,9 +1,9 @@
 #include "ft_printf.h"
 #include "stdio.h"
 
-static char remainderconvert(long int arg)
+static char remainderconvert(long unsigned arg)
 {
-	long int rem_int;
+	long unsigned int rem_int;
 	char rem_char;
 
 	rem_int = arg % 16;
@@ -21,9 +21,9 @@ static char remainderconvert(long int arg)
 
 
 
-char* ft_hexconvert(unsigned int arg)
+char* ft_hexconvertptr(long unsigned int arg)
 {
-	long int quotient;
+	long unsigned int quotient;
 	int index;
 	char remainder;
 	char *hexstr;
@@ -32,8 +32,6 @@ char* ft_hexconvert(unsigned int arg)
 	if(hexstr == NULL)
 		return (NULL);
 	index = 0;
-	if(arg == 0)
-		hexstr[index++] = '0';
 	while(arg > 0)
 	{
 		quotient = arg / 16;
@@ -45,4 +43,5 @@ char* ft_hexconvert(unsigned int arg)
 	hexstr[index] = '\0';
 	return(hexstr);
 }
+
 
